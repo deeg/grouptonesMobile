@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>{title}</title>
+
+  <link rel="stylesheet" href="/css/normalize.css" />
+  <link rel="stylesheet" href="/css/foundation.css" />
+  <link rel="stylesheet" href="/css/global.css" />
+  
+  <script src="/js/vendor/custom.modernizr.js"></script>
+
+</head>
+<body>
+
+	<div class="row">
+		<div class="large-12 columns">
+			<h1> GroupTones Mobile </h1>
+			<p>
+				<h4> This is version 0.0.1. </h4>
+			</p>
+			<hr />
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-8 columns">		
+
+			<div class="row">
+				<div class="large-6 columns">
+					{?artist_name}
+						<p><a href="/logout" class="alert button">Log Out</a>
+					{:else}
+						<p><a href="/login" class="success button">Log In</a>
+							<a href="#" class="alert button">Sign Up</a>
+						</p>
+					{/artist_name}
+					
+				</div>
+			</div>
+			{?artist_name}
+			<div class="row">
+				<div class="large-6 columns">
+					<p>
+						<a href="/events" class="success button">Events</a>
+					</p>
+				</div>
+			</div>
+			{/artist_name}
+		</div>
+
+		
+	</div>
+
+
+  <script src='/js/vendor/jquery.js'></script> 
+  <script src="/js/foundation.min.js"></script>
+  
+  <script>
+    $(document).foundation();
+  </script>
+</body>
+</html>
