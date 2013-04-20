@@ -21,31 +21,6 @@ var connection = mysql.createConnection({
   database : 'colinuli_testtones'
 });
 
-passport.use(new LocalStrategy(
-  function(username, password, done) {
-    connection.query('SELECT * from artists_profile where email = "' + username + '"', function(err, user) {
-        if (err) { return done(err); }
-        if (!user || !user[0]) {
-          return done(null, false, { message: 'Incorrect username.' });
-        }
-        if (user[0].password !== crypto.createHash('sha256').update(password).digest('hex')) {
-          return done(null, false, { message: 'Incorrect password.' });
-        }
-        return done(null, user[0]);
-    });
-  }
-));
-
-passport.serializeUser(function(user, done) {
-  done(null, user.id);
-});
-
-passport.deserializeUser(function(id, done) {
-  connection.query('SELECT * from artists_profile where id = "' + id + '"', function(err, user) {
-    done(err, user);
-  });
-});
-
 server.configure(function(){
     server.set('views', __dirname + '/static/views');
     server.set('view options', { layout: false });
@@ -61,11 +36,9 @@ server.configure(function(){
     server.use(server.router);
 });
 
-
-
+require('./lib/passport')(connection, crypto);
 
 require('./lib/routes')(server, passport, connection);
-
 
 server.listen(port);
 console.log('Listening on localhost:' + port );
