@@ -1,0 +1,6 @@
+{>"listView"/}
+
+{<listItems}
+<h3>{proj_name} </h3>
+<h4>Description: {proj_description} </h4>
+{/listItems}
