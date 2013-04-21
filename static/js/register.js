@@ -147,9 +147,9 @@ Register = {
     changeCountryHandler:function(){
         var $state = $('#state');
         if($('#country').val() === 'United States'){
-            $state.parent().removeClass('hidden');
+            $state.parents('.control-group').removeClass('hidden');
         }else{
-            $state.parent().addClass('hidden');
+            $state.parents('.control-group').addClass('hidden');
         }
     }
 }
