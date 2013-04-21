@@ -12,10 +12,16 @@
         </div>
 
         <div data-role="panel" id="sidePanel">
+            {?currentUser.artist_name}
+            <p><a href="/logout">Logout</a> </p>
             <p><a href="/profile">Edit Profile</a> </p>
             <p> <a href="/events">Events</a></p>
             <p><a href="/musicians">Musicians</a> </p>
             <p> <a href="/projects">Projects</a> </p>
+            {:else}
+            <p><a href="/register">Register</a> </p>
+            <p><a href="/login">Login</a> </p>
+            {/currentUser.artist_name}
             <!-- panel content goes here -->
         </div>
     </div>
