@@ -1,4 +1,4 @@
-<select id="country" name="country">
+<select id="country" name="country" onchange="Register.changeCountryHandler();">
     <option value="United States" selected="selected">United States</option>
     <option value="Afghanistan">Afghanistan</option>
     <option value="Åland Islands">Åland Islands</option>

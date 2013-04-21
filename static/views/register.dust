@@ -1,10 +1,17 @@
-{>"head"/}
+{>"pageBase"/}
 
 {<dynamicJS}
 <script type="text/javascript" src="/js/register.js"></script>
+
 {/dynamicJS}
+
+{<dynamicHeader}
+Register
+{/dynamicHeader}
+
+{<dynamicBody}
 <div class="statusMessage"></div>
-<form>
+<form data-ajax="false" action="javascript:void(0)">
     <div class="control-group">
         <label class="control-label" for="name">Name</label>
         <div class="controls">
@@ -15,7 +22,7 @@
     <div class="control-group">
         <label class="control-label" for="name">Email</label>
         <div class="controls">
-            <input id="email" name="email" type="email" placeholder="Email">
+            <input id="email" name="email" type="email" placeholder="Email" required>
         </div>
         <span class="help-block hidden" for="email"></span>
     </div>
@@ -34,18 +41,32 @@
         <span class="help-block hidden" for="confirmPassword"></span>
     </div>
     <div class="control-group">
+        <label class="control-label" for="name">Street Address (Optional)</label>
+        <div class="controls">
+            <input id="streetAddress" name="streetAddress" type="text" placeholder="Street Address (optional)">
+        </div>
+        <span class="help-block hidden" for="streetAddress"></span>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="name">City</label>
+        <div class="controls">
+            <input id="city" name="city" type="text" placeholder="City">
+        </div>
+        <span class="help-block hidden" for="city"></span>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="name">State</label>
+        <div class="controls">
+            {>"stateSelector"/}
+        </div>
+        <span class="help-block hidden" for="state"></span>
+    </div>
+    <div class="control-group">
         <label class="control-label" for="country">Country</label>
         <div class="controls">
             {>"countrySelector"/}
         </div>
         <span class="help-block hidden" for="country"></span>
-    </div>
-    <div class="control-group">
-        <label class="control-label" for="name">Location</label>
-        <div class="controls">
-            <input id="location" name="location" type="text" placeholder="Location">
-        </div>
-        <span class="help-block hidden" for="location"></span>
     </div>
     <div class="control-group">
         <label class="checkbox">
@@ -54,5 +75,6 @@
         </label>
         <span class="help-block hidden" for="privacyPolicy"></span>
     </div>
-    <button id="submitButton" type="submit" formaction="javascript:void(0)" class="btn" onclick="Register.validateEmailFree();">Submit</button>
+    <button id="submitButton" class="btn" onclick="Register.validateEmailFree();">Submit</button>
 </form>
+{/dynamicBody}

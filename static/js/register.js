@@ -3,20 +3,17 @@ if(typeof Register == 'undefined'){
 }
 
 Register = {
-    submit: function(){
-        var artist = {}
+    ARTIST:{},
 
-        artist.email = $('#email').val();
-        artist.name = $('#name').val();
-        artist.password = $('#password').val();
-        artist.location = $('#location').val();
+    submit: function(){
+        Register.ARTIST.name = $('#name').val();
 
         $.ajax({
             url: "/registerArtist",
             type: "post",
-            data: artist,
+            data: Register.ARTIST,
             success: function(response){
-                console.log(response);
+                window.location = "/";
             },
             error:function(){
                 $('.statusMessage').addClass('error');
@@ -33,13 +30,13 @@ Register = {
         //Clear errors
         Register.clearErrors();
 
-        var email = $('#email').val();
+        Register.ARTIST.email = $('#email').val();
         var $emailHelpBlock = $('.help-block[for=email]');
 
-        if(email){
+        if(Register.ARTIST.email){
             //Validate email not already used in DB
             $.ajax({
-                url: "/verifyEmailFree?email=" + email,
+                url: "/verifyEmailFree?email=" + Register.ARTIST.email,
                 type: "get",
                 success: function(response){
                     if(response.emailFree){
@@ -68,11 +65,11 @@ Register = {
     validateFields:function(){
         var error = false;
 
-        var password = $('#password').val();
+        Register.ARTIST.password = $('#password').val();
         var confirmPassword = $('#confirmPassword').val();
 
         //Verify that passwords match
-        if(password != confirmPassword){
+        if(Register.ARTIST.password != confirmPassword){
             error = true;
             var $passwordHelpBlock = $('.help-block[for=confirmPassword]');
             $passwordHelpBlock.html('Passwords do not match');
@@ -91,10 +88,52 @@ Register = {
         }
 
         if(!error){
-            Register.submit();
+            Register.getGeoLocation();
         }else{
             $('#submitButton').removeAttr('disabled');
         }
+    },
+
+    getGeoLocation:function(){
+        Register.ARTIST.streetAddress = $('#streetAddress').val();
+        Register.ARTIST.country = $('#country').val();
+        Register.ARTIST.city = $('#city').val();
+        Register.ARTIST.state = '';
+        if($('#state:visible').size() > 0){
+            Register.ARTIST.state = $('#state').val();
+        }
+
+        var url = 'http://maps.googleapis.com/maps/api/geocode/json?address=' + encodeURI(Register.ARTIST.streetAddress)
+                                                                              + ' ' + encodeURI(Register.ARTIST.city)
+                                                                              + ' ' + encodeURI(Register.ARTIST.state)
+                                                                              + ' ' + encodeURI(Register.ARTIST.country)
+                                                                              +'&sensor=false';
+
+        $.ajax({
+            url: url,
+            type: "get",
+            success: function(response){
+                if(response.results && response.results[0]){
+                    //Check for zip code
+                    var addressComponents = response.results[0].address_components;
+
+                    $.each(addressComponents, function(i, e){
+                        if(e.types[0] === 'postal_code'){
+                            Register.ARTIST.zip = e['short_name'];
+                        }
+                    })
+
+                    //Set Lat / Lng
+                    Register.ARTIST.lat = response.results[0].geometry.location.lat;
+                    Register.ARTIST.lng = response.results[0].geometry.location.lng;
+                }
+                Register.submit();
+
+            },
+            error:function(){
+                Register.submit();
+            }
+        });
     },
 
     clearErrors:function(){
@@ -103,5 +142,14 @@ Register = {
         $helpBlock.html();
         $helpBlock.parent().removeClass('error');
         $helpBlock.addClass('hidden');
+    },
+
+    changeCountryHandler:function(){
+        var $state = $('#state');
+        if($('#country').val() === 'United States'){
+            $state.parent().removeClass('hidden');
+        }else{
+            $state.parent().addClass('hidden');
+        }
     }
 }
