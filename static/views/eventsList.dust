@@ -1,8 +1,11 @@
 {>"listView"/}
 
 {<listItems}
-    <h3>{event_name} </h3>
-    <h4>Venue: {event_venue} </h4>
+    <a href="/events/{id}" data-ajax="false">
+        <img src="" />
+        <h1 class="myHeader"> {event_name} </h1>
+        <p class="myParagraph">{event_venue}</p>
+    </a>
 {/listItems}
 
 {<listType}events{/listType}
