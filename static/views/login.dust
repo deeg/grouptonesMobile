@@ -1,15 +1,21 @@
-<link rel="stylesheet" href="/css/global.css" />
+{>"pageBase"/}
 
-<form action="/login" method="post">
-    <div>
-        <label>Username:</label>
-        <input type="text" name="username"/>
-    </div>
-    <div>
-        <label>Password:</label>
-        <input type="password" name="password"/>
-    </div>
-    <div>
-        <input type="submit" value="Log In"/>
-    </div>
-</form>
+{<dynamicHeader}
+Login
+{/dynamicHeader}
+
+{<dynamicBody}
+    <form action="/login" data-ajax="false" method="post">
+        <div>
+            <label>Username:</label>
+            <input type="text" name="username"/>
+        </div>
+        <div>
+            <label>Password:</label>
+            <input type="password" name="password"/>
+        </div>
+        <div>
+            <input type="submit" value="Log In"/>
+        </div>
+    </form>
+{/dynamicBody}

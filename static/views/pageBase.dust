@@ -1,0 +1,13 @@
+{>"head"/}
+
+<body>
+    <div data-role="page" class="type-home">
+        <div data-role="header">
+            <h1>{+dynamicHeader}{/dynamicHeader}</h1>
+        </div>
+        <div data-role="content">
+            {+dynamicBody}
+            {/dynamicBody}
+        </div>
+    </div>
+</body>
