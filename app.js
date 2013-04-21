@@ -37,7 +37,7 @@ server.configure(function(){
 
 require('./lib/passport')(connection, crypto);
 
-require('./lib/routes')(server, passport, connection);
+require('./lib/routes')(server, passport, connection, crypto);
 
 server.listen(port);
 console.log('Listening on localhost:' + port );

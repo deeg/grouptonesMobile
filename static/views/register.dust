@@ -3,7 +3,7 @@
 {<dynamicJS}
 <script type="text/javascript" src="/js/register.js"></script>
 {/dynamicJS}
-
+<div class="statusMessage"></div>
 <form>
     <div class="control-group">
         <label class="control-label" for="name">Name</label>
@@ -15,7 +15,7 @@
     <div class="control-group">
         <label class="control-label" for="name">Email</label>
         <div class="controls">
-            <input id="email" name="email" type="email" placeholder="Email" required>
+            <input id="email" name="email" type="email" placeholder="Email">
         </div>
         <span class="help-block hidden" for="email"></span>
     </div>
@@ -48,11 +48,11 @@
         <span class="help-block hidden" for="location"></span>
     </div>
     <div class="control-group">
-        <label class="control-label" for="privacyPolicy">You must read and accept the pricacy policy to register.</label>
         <label class="checkbox">
             <input id="privacyPolicy" type="checkbox" value="" name="privacyPolicy">
-            Accept
+            Accept Privacy Policy
         </label>
+        <span class="help-block hidden" for="privacyPolicy"></span>
     </div>
-    <button type="submit" formaction="javascript:void(0)" class="btn" onclick="Register.submit();">Submit</button>
+    <button id="submitButton" type="submit" formaction="javascript:void(0)" class="btn" onclick="Register.validateEmailFree();">Submit</button>
 </form>
