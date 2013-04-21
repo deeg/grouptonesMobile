@@ -11,10 +11,6 @@ h1, h3, h4 {
 	color: white;
 }
 
-body {
-	background: url(/img/box-bg.jpg);
-}
-
 .hidden {
     display:none !important
 }
