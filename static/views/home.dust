@@ -1,0 +1,20 @@
+{>"pageBase"/}
+
+{<dynamicBody}
+    {?artist_name}
+        <a href="/logout" class="alert button">Log Out</a>
+        {:else}
+        <p>
+            <a href="/login" class="success button">Log In</a>
+            <a href="#" class="alert button">Sign Up</a>
+        </p>
+    {/artist_name}
+
+    {?artist_name}
+            <p>
+                <a href="/events" data-ajax="false" class="success button">Events</a>
+                <a href="/musicians" data-ajax="false" class="success button">Musicians</a>
+                <a href="/projects" data-ajax="false" class="success button">Projects</a>
+            </p>
+    {/artist_name}
+{/dynamicBody}

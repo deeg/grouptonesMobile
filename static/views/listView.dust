@@ -1,6 +1,6 @@
         {>"pageBase"/}
 
-
+        {<dynamicCSS}
         <style>
             /**** Trying to style h1 and paragraph *******/
         .myHeader {
@@ -28,6 +28,7 @@
             margin-bottom:0px;
         }
         </style>
+                {/dynamicCSS}
 
 
         {<dynamicHeader}
