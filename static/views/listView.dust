@@ -38,18 +38,19 @@
     </style>
 </head>
     <body>
+
         <div data-role="page" class="type-home">
             <div data-role="header">
-                <h1>Artists Result List</h1>
+                <h1>{+listType}{/listType} Result List</h1>
             </div>
             <div data-role="content">
-                <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="a">
+                <ul data-role="listview" data-filter="true" data-filter-placeholder="Refine by {+searchPlaceholder}{/searchPlaceholder}" data-inset="true" data-theme="c" data-dividertheme="a">
                     <li data-role="list-divider">Overview</li>
                     {#list}
-                    <li>
+
                         {+listItems}
                         {/listItems}
-                    </li>
+
                     {/list}
                 </ul>
             </div>

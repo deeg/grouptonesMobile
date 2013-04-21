@@ -1,11 +1,15 @@
 {>"listView"/}
 
 {<listItems}
-    <a href="/projects/{id}" data-ajax="false">
-        <img src="" />
-        <h1 class="myHeader"> {proj_name} </h1>
-        <p class="myParagraph">{proj_description}</p>
-    </a>
+    <li data-filtertext="{proj_name} {proj_description}">
+        <a href="/projects/{id}" data-ajax="false">
+            <img src="" />
+            <h1 class="myHeader"> {proj_name} </h1>
+            <p class="myParagraph">{proj_description}</p>
+        </a>
+    </li>
 {/listItems}
 
-{<listType}projects{/listType}
+{<listType}Projects{/listType}
+
+{<searchPlaceholder}name, or description{/searchPlaceholder}
