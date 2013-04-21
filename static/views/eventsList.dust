@@ -1,6 +1,8 @@
 {>"listView"/}
 
 {<listItems}
-<h3>{event_name} </h3>
-<h4>Venue: {event_venue} </h4>
+    <h3>{event_name} </h3>
+    <h4>Venue: {event_venue} </h4>
 {/listItems}
+
+{<listType}events{/listType}

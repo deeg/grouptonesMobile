@@ -13,7 +13,7 @@
   <h1> Events Close By </h1>
   <div id="container">
   	{#list}
-  		<a href="/projects/{id}" class="item listItem">
+  		<a href="/{+listType}{/listType}/{id}" class="item listItem">
         {+listItems}
         {/listItems}
   		</a>

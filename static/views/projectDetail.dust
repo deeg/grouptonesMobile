@@ -3,9 +3,9 @@
 <div id="container">
   	{#item}
   		<div class="item listItem">
-			{proj_name}
-			{proj_description}
-			{proj_website_url}
+			<p>{proj_name} </p>
+			<p>{proj_description} </p>
+			<p>{proj_website_url}   </p>
 		</div>
 	{/item}
 </div>

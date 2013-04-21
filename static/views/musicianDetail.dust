@@ -1,0 +1,10 @@
+{>"head"/}
+
+<div id="container">
+    {#item}
+    <div class="item listItem">
+        <p>{artist_name}</p>
+        <p>{artist_instrument} </p>
+    </div>
+    {/item}
+</div>

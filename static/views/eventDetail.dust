@@ -1,0 +1,11 @@
+{>"head"/}
+
+<div id="container">
+    {#item}
+    <div class="item listItem">
+        <p>{event_name}</p>
+        <p>{event_description} </p>
+        <p>{event_venue} </p>
+    </div>
+    {/item}
+</div>
