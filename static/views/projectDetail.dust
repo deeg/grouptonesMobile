@@ -1,11 +1,13 @@
-{>"head"/}
+{>"pageBase"/}
 
-<div id="container">
-  	{#item}
-  		<div class="item listItem">
-			<p>{proj_name} </p>
-			<p>{proj_description} </p>
-			<p>{proj_website_url}   </p>
-		</div>
-	{/item}
-</div>
+{<dynamicHeader}
+Project Detail
+{/dynamicHeader}
+
+{<dynamicBody}
+    {#item}
+        <p>{proj_name}</p>
+        <p>{proj_description} </p>
+        <p>{proj_website_url} </p>
+    {/item}
+{/dynamicBody}

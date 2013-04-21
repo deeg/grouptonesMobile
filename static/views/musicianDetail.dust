@@ -1,10 +1,12 @@
-{>"head"/}
+{>"pageBase"/}
 
-<div id="container">
+{<dynamicHeader}
+Musician Detail
+{/dynamicHeader}
+
+{<dynamicBody}
     {#item}
-    <div class="item listItem">
         <p>{artist_name}</p>
         <p>{artist_instrument} </p>
-    </div>
     {/item}
-</div>
+{/dynamicBody}

@@ -1,11 +1,14 @@
-{>"head"/}
+{>"pageBase"/}
 
-<div id="container">
+
+{<dynamicHeader}
+    Event Detail
+{/dynamicHeader}
+
+{<dynamicBody}
     {#item}
-    <div class="item listItem">
-        <p>{event_name}</p>
-        <p>{event_description} </p>
-        <p>{event_venue} </p>
-    </div>
+            <p>{event_name}</p>
+            <p>{event_description} </p>
+            <p>{event_venue} </p>
     {/item}
-</div>
+{/dynamicBody}
