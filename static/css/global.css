@@ -15,3 +15,7 @@ body {
 	background: url(/img/box-bg.jpg);
 }
 
+.hidden {
+    display:none !important
+}
+
