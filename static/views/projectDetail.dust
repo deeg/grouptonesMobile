@@ -1,1 +1,11 @@
-{item.proj_name}
+{>"head"/}
+
+<div id="container">
+  	{#item}
+  		<div class="item listItem">
+			{proj_name}
+			{proj_description}
+			{proj_website_url}
+		</div>
+	{/item}
+</div>

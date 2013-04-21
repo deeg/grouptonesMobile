@@ -13,7 +13,6 @@ var crypto = require('crypto');
 var passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy;
 
-
 var connection = mysql.createConnection({
   host     : 'ns35.etcserver.com',
   user     : 'colinuli_test',

@@ -13,10 +13,10 @@
   <h1> Events Close By </h1>
   <div id="container">
   	{#list}
-  		<div class="item listItem">
+  		<a href="/projects/{id}" class="item listItem">
         {+listItems}
         {/listItems}
-  		</div>
+  		</a>
   	{/list}
   </div>
 
