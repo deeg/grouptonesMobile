@@ -4,7 +4,7 @@
     <div data-role="page" class="type-home">
         <div data-role="header">
             <a href="#sidePanel" data-icon="gear">Open </a>
-            <h1>{+dynamicHeader}{/dynamicHeader}</h1>
+            <h1>{+dynamicHeader}GroupTones Mobile{/dynamicHeader}</h1>
         </div>
         <div data-role="content">
             {+dynamicBody}
@@ -13,11 +13,12 @@
 
         <div data-role="panel" id="sidePanel">
             {?currentUser.artist_name}
-            <p><a href="/logout">Logout</a> </p>
+            <p><a href="/">Home</a> </p>
             <p><a href="/profile">Edit Profile</a> </p>
             <p> <a href="/events">Events</a></p>
             <p><a href="/musicians">Musicians</a> </p>
             <p> <a href="/projects">Projects</a> </p>
+            <p><a href="/logout">Logout</a> </p>
             {:else}
             <p><a href="/register">Register</a> </p>
             <p><a href="/login">Login</a> </p>

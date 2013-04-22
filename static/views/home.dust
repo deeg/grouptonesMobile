@@ -2,19 +2,16 @@
 
 {<dynamicBody}
     {?currentUser.artist_name}
-        <a href="/logout" class="alert button">Log Out</a>
-        {:else}
-        <p>
-            <a href="/login" class="success button">Log In</a>
-            <a href="#" class="alert button">Sign Up</a>
-        </p>
-    {/currentUser.artist_name}
-
-    {?currentUser.artist_name}
             <p>
-                <a href="/events" data-ajax="false" class="success button">Events</a>
-                <a href="/musicians" data-ajax="false" class="success button">Musicians</a>
-                <a href="/projects" data-ajax="false" class="success button">Projects</a>
+                <a href="/events" data-ajax="false" data-role="button">Events</a>
+                <a href="/musicians" data-ajax="false" data-role="button">Musicians</a>
+                <a href="/projects" data-ajax="false" data-role="button">Projects</a>
+                <a href="/logout" data-role="button">Log Out</a>
+            </p>
+        {:else}
+            <p>
+                <a href="/login" data-role="button">Log In</a>
+                <a href="/register" data-role="button" data-ajax="false">Sign Up</a>
             </p>
     {/currentUser.artist_name}
 {/dynamicBody}
