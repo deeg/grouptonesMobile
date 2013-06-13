@@ -27,7 +27,7 @@
 
 /* ARTIST DETAIL PAGE STYLES */
 
-#artistName{
+.entryTitle{
     font-size: 25px;
     text-align: center;
 }

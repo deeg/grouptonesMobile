@@ -7,8 +7,15 @@
 
 {<dynamicBody}
     {#item}
-            <p>{event_name}</p>
-            <p>{event_description} </p>
-            <p>{event_venue} </p>
+        <span class="entryTitle">{event_name}</span>
+        <span class="entryLabel">Start Time:</span>
+        <span class="entry">{event_start}</span>
+        <span class="entryLabel">Description:</span>
+        <span class="entry">{event_description}</span>
+        <span class="entryLabel">Venue:</span>
+        <span class="entry">{event_venue}</span>
+        <span class="entryLabel">Location:</span>
+        <span class="entry">{event_street}, {event_city}, {event_state} {event_zip}</span>
+
     {/item}
 {/dynamicBody}

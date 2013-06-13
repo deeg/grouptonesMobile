@@ -6,7 +6,7 @@ Musician Detail
 
 {<dynamicBody}
     {#item}
-        <span id="artistName">{artist_name}</span>
+        <span class="entryTitle">{artist_name}</span>
         <span class="entryLabel">Instrument(s):</span>
         <span class="entry">{artist_instrument}</span>
         <span class="entryLabel">Band(s):</span>
