@@ -11,3 +11,38 @@
     display:none !important
 }
 
+#logo{
+    position:absolute;
+    right:0;
+}
+
+#headerText{
+    display:inline;
+}
+
+#headerWrapper{
+    padding-bottom: 25px;
+}
+
+
+/* ARTIST DETAIL PAGE STYLES */
+
+#artistName{
+    font-size: 25px;
+    text-align: center;
+}
+
+.entryLabel{
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.entry{
+    display: block;
+}
+
+.entryDetail{
+    display: block;
+    font-size: 10px;
+}

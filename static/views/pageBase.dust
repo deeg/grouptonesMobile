@@ -2,16 +2,17 @@
 
 <body>
     <div data-role="page" class="type-home">
-        <div data-role="header">
-            <a href="#sidePanel" data-icon="gear">Open </a>
-            <h1>{+dynamicHeader}GroupTones Mobile{/dynamicHeader}</h1>
+        <div id="headerWrapper" data-role="header">
+            <a href="#sidePanel" data-role="button" data-inline="true" data-icon="grid"></a>
+            <img src="/img/logo.png" id="logo">
+            <h1 id="headerText">{+dynamicHeader}GroupTones Mobile{/dynamicHeader}</h1>
         </div>
         <div data-role="content">
             {+dynamicBody}
             {/dynamicBody}
         </div>
 
-        <div data-role="panel" id="sidePanel">
+        <div data-role="panel"  data-display="overlay" id="sidePanel">
             {?currentUser.artist_name}
             <p><a href="/">Home</a> </p>
             <p><a href="/profile">Edit Profile</a> </p>

@@ -6,7 +6,22 @@ Musician Detail
 
 {<dynamicBody}
     {#item}
-        <p>{artist_name}</p>
-        <p>{artist_instrument} </p>
+        <span id="artistName">{artist_name}</span>
+        <span class="entryLabel">Instrument(s):</span>
+        <span class="entry">{artist_instrument}</span>
+        <span class="entryLabel">Band(s):</span>
+        <span class="entry">{artist_band}</span>
+        <span class="entryLabel">About:</span>
+        <span class="entry">{artist_about}</span>
+        <span class="entryLabel">Looking To Play:</span>
+<ul>
+    {#likesToPlayData}
+    <li>
+        <span class="entry">{genre}</span>
+        {?details}<ul><li><span class="entryDetails">{details}</span></li></ul>{/details}
+    </li>
+    {/likesToPlayData}
+</ul>
+
     {/item}
 {/dynamicBody}

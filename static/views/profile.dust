@@ -1,0 +1,78 @@
+{>"pageBase"/}
+
+{<dynamicJS}
+<script type="text/javascript" src="/js/profile.js"></script>
+
+{/dynamicJS}
+
+{<dynamicHeader}
+Edit Profile
+{/dynamicHeader}
+
+{<dynamicBody}
+<div class="statusMessage"></div>
+<form data-ajax="false" action="javascript:void(0)">
+    <div class="control-group">
+        <label class="control-label" for="artistAbout">About:</label>
+        <span class="profileData">{user.artist_about}</span>
+        <div class="controls editMode hidden">
+            <input id="artistAbout" class="profileFormElement" rows="8" name="artist_about" type="text" value="{user.artist_about}" placeholder="Tell us about youself!">
+        </div>
+        <span class="help-block hidden" for="artistAbout"></span>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="artistServices">Services:</label>
+        <span class="profileData">{user.artist_services}</span>
+        <div class="controls editMode hidden">
+            <input id="artistServices" class="profileFormElement" name="artist_services" type="text" value="{user.artist_services}" placeholder="What do you provide?">
+        </div>
+        <span class="help-block hidden" for="artistServices"></span>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="artistBand">Band(s):</label>
+        <span class="profileData">{user.artist_band}</span>
+        <div class="controls editMode hidden">
+            <input id="artistBand" class="profileFormElement" name="artist_band" type="text" value="{user.artist_band}" placeholder="List your bands here.">
+        </div>
+        <span class="help-block hidden" for="artistBand"></span>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="artistInstrument">Instrument(s):</label>
+        <span class="profileData">{user.artist_instrument}</span>
+        <div class="controls editMode hidden">
+            <input id="artistInstrument" class="profileFormElement" name="artist_instrument" type="text" value="{user.artist_instrument}" placeholder="What do you play?">
+        </div>
+        <span class="help-block hidden" for="artistInstrument"></span>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="email">Email:</label>
+        <span class="profileData">{user.email}</span>
+        <div class="controls editMode hidden">
+            <input id="email" class="profileFormElement" name="email" type="text" value="{user.email}" placeholder="user@domain.com">
+            <input type="checkbox" id="doNotShowEmail" {@eq key="1" value=user.email_viewable}checked{/eq}>
+        </div>
+        <span class="help-block hidden" for="email"></span>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="artistPhone">Phone Number:</label>
+        <span class="profileData">{user.artist_phone}</span>
+        <div class="controls editMode hidden">
+            <input id="artistPhone" class="profileFormElement" name="artist_phone" type="text" value="{user.artist_phone}" placeholder="xxx-xxx-xxxx">
+            <input type="checkbox" id="doNotShowPhone" {?user.phone_viewable}checked{/user.phone_viewable}>
+        </div>
+        <span class="help-block hidden" for="artistPhone"></span>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="artistWebsite">Website:</label>
+        <a href="{user.artist_website1}"<span class="profileData">{user.artist_website1_name}</span></a>
+        <div class="controls editMode hidden">
+            <input id="artistWebsiteName" class="profileFormElement" name="artist_website1_name" type="text" value="{user.artist_website1_name}" placeholder="Website Name">
+            <input id="artistWebsite" class="profileFormElement" name="artist_website1" type="text" value="{user.artist_website1}" placeholder="Website Url (http://domain.com)">
+        </div>
+        <span class="help-block hidden" for="artistPhone"></span>
+    </div>
+    <button id="editButton" class="btn" data-icon="alert" value="false" onclick="Profile.toggleEditMode(this.value);">Edit</button>
+    <button id="submitButton" class="editMode" disabled="ture" onclick="Profile.saveProfile({user.id});">Submit</button>
+
+</form>
+{/dynamicBody}

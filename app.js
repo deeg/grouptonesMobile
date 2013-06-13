@@ -4,6 +4,7 @@ var express = require('express'),
     server = express();
 
 var dust = require('dustjs-linkedin'),
+    helpers = require('dustjs-helpers'),
     cons = require('consolidate');
 
 var mysql = require('mysql');
