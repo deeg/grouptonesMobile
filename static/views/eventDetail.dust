@@ -9,6 +9,7 @@
     {#item}
         <span class="entryTitle">{event_name}</span>
         <span class="entryLabel">Start Time:</span>
+        <!-- TODO: Change into date -->
         <span class="entry">{event_start}</span>
         <span class="entryLabel">Description:</span>
         <span class="entry">{event_description}</span>

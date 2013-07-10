@@ -6,6 +6,7 @@
             <img src="" />
             <h1 class="myHeader"> {event_name} </h1>
             <p class="myParagraph">{event_venue}</p>
+            <p class="myParagraph">{distance} MI</p>
         </a>
     </li>
 {/listItems}

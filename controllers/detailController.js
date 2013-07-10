@@ -31,3 +31,5 @@ module.exports.artistDetail = function (req, res, connection) {
             });
         })
 }
+
+
