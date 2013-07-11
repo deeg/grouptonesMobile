@@ -6,16 +6,11 @@ Project Detail
 
 {<dynamicBody}
     {#item}
-        <h1> Posted by: </h1>
-
-        Description
-        Website
-        Commitment
-        Distance
+        <h3> Posted by: <a href="/musicians/{artist_id}" data-ajax="false"> {artist_name} </a></h3>
         <p>Title: {proj_name}</p>
         <p>Description: {proj_description} </p>
         <p>Website: {proj_website_url} </p>
-        <p>Commitment: </p>
-        <p>Distance: </p>
+        <p>Commitment: {proj_commitment}</p>
+        <p>Distance: {distance}</p>
     {/item}
 {/dynamicBody}
