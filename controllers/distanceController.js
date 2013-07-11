@@ -7,9 +7,9 @@
  */
 var _ = require("underscore");
 
-module.exports.calculateDistances = function (rows, uLat, uLng) {
+module.exports.calculateDistances = function (rows, uLat, uLng, latParam, lngParam) {
     _.each(rows, function(element, index){
-        var distance = module.exports.calculateDistance(element.event_lat, element.event_lng, uLat, uLng);
+        var distance = module.exports.calculateDistance(element[latParam], element[lngParam], uLat, uLng);
         element.distance = distance;
     })
 

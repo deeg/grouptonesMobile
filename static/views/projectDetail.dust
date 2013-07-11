@@ -6,8 +6,16 @@ Project Detail
 
 {<dynamicBody}
     {#item}
-        <p>{proj_name}</p>
-        <p>{proj_description} </p>
-        <p>{proj_website_url} </p>
+        <h1> Posted by: </h1>
+
+        Description
+        Website
+        Commitment
+        Distance
+        <p>Title: {proj_name}</p>
+        <p>Description: {proj_description} </p>
+        <p>Website: {proj_website_url} </p>
+        <p>Commitment: </p>
+        <p>Distance: </p>
     {/item}
 {/dynamicBody}

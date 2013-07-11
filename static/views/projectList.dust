@@ -5,7 +5,8 @@
         <a href="/projects/{id}" data-ajax="false">
             <img src="" />
             <h1 class="myHeader"> {proj_name} </h1>
-            <p class="myParagraph">{proj_description}</p>
+            <h3>Posted By :{artist_name}</h3>
+            <h5>Distance : {distance}</h5>
         </a>
     </li>
 {/listItems}
