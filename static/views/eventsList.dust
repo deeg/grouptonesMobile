@@ -3,7 +3,7 @@
 {<listItems}
     <li data-filtertext="{event_name} {event_venue} {event_city}">
         <a href="/events/{id}" data-ajax="false">
-            <img src="" />
+            <img class="listViewThumb" src="/img/events.png" />
             <h1 class="myHeader"> {event_name} </h1>
             <p class="myParagraph">{event_venue}</p>
             <p class="myParagraph">{distance} MI</p>

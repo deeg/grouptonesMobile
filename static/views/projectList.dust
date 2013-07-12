@@ -3,7 +3,7 @@
 {<listItems}
     <li data-filtertext="{proj_name} {proj_description}">
         <a href="/projects/{id}" data-ajax="false">
-            <img src="" />
+            <img class="listViewThumb" src="/img/projects.png" />
             <h1 class="myHeader"> {proj_name} </h1>
             <h3>Posted By :{artist_name}</h3>
             <h5>Distance : {distance} MI</h5>
