@@ -14,8 +14,7 @@ Login
             <label>Password:</label>
             <input type="password" name="password"/>
         </div>
-        <div>
-            <input type="submit" value="Log In"/>
-        </div>
+        <p></p>
+        <button type="submit" name="submit" value="submit" data-theme="b" >Submit</button>
     </form>
 {/dynamicBody}
