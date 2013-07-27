@@ -17,6 +17,7 @@
         <span class="entry">{event_venue}</span>
         <span class="entryLabel">Location:</span>
         <span class="entry">{event_street}, {event_city}, {event_state} {event_zip}</span>
-
+        <span class="entryLabel">Posted By:</span>
+        <span class="entry"> <a href="/musicians/{artist_id}" data-ajax="false"> {artist_name} </a>  </span>
     {/item}
 {/dynamicBody}

@@ -28,7 +28,7 @@ module.exports.search = function (req, res, connection, searchType) {
         console.log(rows.length);
         console.log(rows[0]);
         if(rows.length < 1){
-            connection.query("SELECT * from projects where " + paramPrefix + "_state=?", req.user[0].artist_state, function(error, rowss){
+            connection.query("SELECT * from " + tableName + " where " + paramPrefix + "_state=?", req.user[0].artist_state, function(error, rowss){
                 if(error) console.error(error);
                 if(rowss.length < 1){                                                                                                       coj
                     connection.query("SELECT * from " + tableName + " limit 10", function(errorr, rowsss){
