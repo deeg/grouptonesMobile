@@ -3,9 +3,9 @@
 {<dynamicBody}
     {?currentUser.artist_name}
             <p>
-                <a href="/events" data-ajax="false" data-role="button">Events</a>
-                <a href="/musicians" data-ajax="false" data-role="button">Musicians</a>
-                <a href="/projects" data-ajax="false" data-role="button">Projects</a>
+                <a href="/events" data-role="button">Events</a>
+                <a href="/musicians" data-role="button">Musicians</a>
+                <a href="/projects" data-role="button">Projects</a>
                 <a href="/logout" data-role="button">Log Out</a>
             </p>
         {:else}
