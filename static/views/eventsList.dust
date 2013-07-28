@@ -6,7 +6,9 @@
             <img class="listViewThumb" src="/img/events.png" />
             <h1 class="myHeader"> {event_name} </h1>
             <p class="myParagraph">{event_venue}</p>
-            <p class="myParagraph">{event_start}</p>
+            <p class="myParagraph">
+                {@dateFormatter uglyDate="{event_start}" /}
+            </p>
             <p class="myParagraph">{distance} MI</p>
         </a>
     </li>

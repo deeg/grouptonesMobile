@@ -7,6 +7,8 @@ var dust = require('dustjs-linkedin'),
     helpers = require('dustjs-helpers'),
     cons = require('consolidate');
 
+require('./lib/dustHelpers');
+
 var mysql = require('mysql');
 
 var crypto = require('crypto');
