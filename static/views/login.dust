@@ -14,7 +14,9 @@ Login
             <label>Password:</label>
             <input type="password" name="password"/>
         </div>
-        <p></p>
-        <button type="submit" name="submit" value="submit" data-theme="b" >Submit</button>
+        {?IncorrectPassword} <h4 class="alert"> {IncorrectPassword} </h4>  {/IncorrectPassword}
+        <div>
+            <button type="submit" name="submit" value="submit" data-theme="b" >Submit</button>
+        </div>
     </form>
 {/dynamicBody}
