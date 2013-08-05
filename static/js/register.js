@@ -13,7 +13,17 @@ Register = {
             type: "post",
             data: Register.ARTIST,
             success: function(response){
-                window.location = "/";
+                $.ajax({
+                    url:'/login',
+                    type:'post',
+                    data: {username: Register.ARTIST.email, password: Register.ARTIST.password},
+                    success: function(response){
+                        window.location = '/profile'
+                    },
+                    error:function(){
+                        window.location = '/'
+                    }
+                })
             },
             error:function(){
                 $('.statusMessage').addClass('error');
