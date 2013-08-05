@@ -1,0 +1,55 @@
+{>"pageBase"/}
+
+{<dynamicJS}
+
+{/dynamicJS}
+
+{<dynamicHeader}
+Contact Us
+{/dynamicHeader}
+
+{<dynamicBody}
+
+<div data-role="collapsible-set" data-theme="b" data-content-theme="b">
+    <div data-role="collapsible" data-collapsed="false">
+        <h3>Send us a Message!</h3>
+
+        <form action="MAILTO:dan@gornstein.com" method="post">
+            <input type="text" id="name" name="name" placeholder="Name" required="required" />
+            <input type="text" id="email" name="email" placeholder="Email" required="required"/>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required="required"/>
+            <textarea id="mail" name="mail" placeholder="Message Text Here..." required="required">
+
+            </textarea>
+            <button type="submit" id="sendMessage" data-theme="a" >Send!</button>
+            <button type="reset" data-theme="a">Reset</button>
+        </form>
+
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('#sendMessage').on('click', function(e) {
+            var payload = {
+                name: $('#name').val(),
+                email: $('#email').val(),
+                subject : $('#subject').val(),
+                mail : $('#mail').val()
+            };
+            e.preventDefault();
+            $.ajax({
+                url: "/contact",
+                type: "post",
+                data: payload,
+                success: function(response){
+                    window.location = '/';
+                },
+                error:function(){
+                    console.log('error');
+                }
+            });
+        });
+    });
+</script>
+
+{/dynamicBody}

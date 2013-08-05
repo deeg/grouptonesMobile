@@ -1,0 +1,15 @@
+{>"pageBase"/}
+
+{<dynamicJS}
+
+{/dynamicJS}
+
+{<dynamicHeader}
+FAQ
+{/dynamicHeader}
+
+{<dynamicBody}
+
+This is a placeholder for the FAQ page.
+
+{/dynamicBody}
