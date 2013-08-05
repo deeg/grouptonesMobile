@@ -10,6 +10,60 @@ FAQ
 
 {<dynamicBody}
 
-This is a placeholder for the FAQ page.
+<div data-role="collapsible-set" data-theme="b" data-content-theme="b">
+    <div data-role="collapsible" data-collapsed="false">
+        <h3>What is Group Tones?</h3>
+        Group Tones is a simple mapping tool built to help today's increasingly DIY music community. Whether you're
+        looking for a new band, your next gig, or even a show in your neighborhood, Group Tones puts you on the musical map.
+    </div>
+    <div data-role="collapsible">
+        <h3>Who is Group Tones for? Who should join Group Tones??</h3>
+        Group Tones is for those of all levels of experience, from novice to rock star. Group Tones was created for
+        everyone who wants to explore diverse musical interests and backgrounds. Whether it's finding a new drummer or
+        your first jazz brunch, Group Tones connects you with the music community.
+    </div>
+    <div data-role="collapsible">
+        <h3>But I'm not a musician, should I still join Group Tones?</h3>
+        Absolutely! Group Tones is for all who want to take part in their music community, not just musicians.
+        Bar owners, graphic artists, sound engineers are all part of today's musical landscape.
+    </div>
+    <div data-role="collapsible">
+        <h3>What is a gig ()? What is an event () Whats the difference?</h3>
+        A gig () is a post seeking musicians. Whether its for a private party or a local festival, a GIG post () is looking for musicians services.
+    </div>
+    <div data-role="collapsible">
+        <!-- TODO: GET IMAGES LIKE IN GROUPTONES FAQ -->
+        <h3>What is a gig? What is an event? Whats the difference?</h3>
+        A gig is a post seeking musicians. Whether its for a private party or a local festival, a GIG post is looking for musicians services. <br/>
+        An EVENT is an open invite to anyone. Whether its a local act, a CD release, or a launch party, an event post is looking for attendees.
+    </div>
+    <div data-role="collapsible">
+        <h3>Why should I join group tones?</h3>
+        Group Tones is incredibly easy to use and free! It was designed with your goals in mind: to create, share, and
+        experience music in a way that is simple and hassle-free. The Group Tones interface was built around Google Maps
+        to make the musical landscape easy to navigate. You work hard enough on your music. Spending hours looking for
+        gigs and musicians shouldn't keep you from spending time on what's most important do you.
+    </div>
+    <div data-role="collapsible">
+        <h3>What if I play classical/polka/horror-core?</h3>
+        It doesn't matter if you play the bass, banjo, or bouzouki, all types of music are encouraged at Group Tones.
+        We appeal to the musician and music lover inside you by allowing you to explore a large variety of music across
+        the globe.
+    </div>
+    <div data-role="collapsible">
+        <h3>Where is Group Tones based? Where can I use Group Tones?</h3>
+        As Group Tones is based in Boston, we are concentrating on a New England-based launch. We hope that you use
+        GroupTones as you travel; we have members from San Francisco to Texas to Haiti. Everyone from Japan to France
+        is welcome and encouraged to join!
+    </div>
+    <div data-role="collapsible">
+        <h3>What does Group Tones cost?</h3>
+        Group Tones is an absolutely free service.
+    </div>
+    <div data-role="collapsible">
+        <h3>Have more questions?</h3>
+        <a href="/contact">Contact us!</a>
+    </div>
+</div>
 
 {/dynamicBody}

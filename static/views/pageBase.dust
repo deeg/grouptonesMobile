@@ -19,6 +19,8 @@
             <p> <a href="/events">Events</a></p>
             <p><a href="/musicians">Musicians</a> </p>
             <p> <a href="/projects">Projects</a> </p>
+            <p> <a href="/faq">FAQ</a> </p>
+            <p> <a href="/contact">Contact Us</a> </p>
             <p><a href="/logout">Logout</a> </p>
             {:else}
             <p><a href="/register">Register</a> </p>
