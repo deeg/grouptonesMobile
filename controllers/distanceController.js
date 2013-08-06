@@ -8,17 +8,28 @@
 var _ = require("underscore");
 
 module.exports.calculateDistances = function (rows, uLat, uLng, latParam, lngParam) {
+    console.log(latParam)
+    console.log(lngParam)
     _.each(rows, function(element, index){
+        if(index == 0){console.log(element);}
         var distance = module.exports.calculateDistance(element[latParam], element[lngParam], uLat, uLng);
         element.distance = distance;
     })
 
-    rows = _.sortBy(rows, function(element){return element.distance})
+    rows = _.sortBy(rows, function(element){return parseFloat(element.distance)})
+
+    rows = _.first(rows, 20);
+
+    console.log(rows);
 
     return rows;
 }
 
 module.exports.calculateDistance = function (lat2, lon2, uLat, uLng) {
+    lat2 = parseFloat(lat2);
+    lon2 = parseFloat(lon2);
+    uLat = parseFloat(uLat);
+    uLng = parseFloat(uLng);
     var toRad = function(Value) {
         /** Converts numeric degrees to radians */
         return Value * Math.PI / 180;
