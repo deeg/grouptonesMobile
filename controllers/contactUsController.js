@@ -6,8 +6,8 @@ module.exports.sendEmail = function (req, res, connection) {
     var smtpTransport = nodemailer.createTransport("SMTP",{
         service: "Gmail",
         auth: {
-            user: "wocochoco@gmail.com",
-            pass: ""
+            user: "grouptonesmobile@gmail.com",
+            pass: "Grouppassword"
         }
     });
 
