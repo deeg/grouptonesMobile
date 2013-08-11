@@ -8,20 +8,19 @@
 var _ = require("underscore");
 
 module.exports.calculateDistances = function (rows, uLat, uLng, latParam, lngParam) {
-    console.log(rows[0]);
     _.each(rows, function(element, index){
         var distance = module.exports.calculateDistance(element[latParam], element[lngParam], uLat, uLng);
         element.distance = distance;
-    })
+    });
 
-    rows = _.sortBy(rows, function(element){return parseFloat(element.distance)})
+    rows = _.filter(rows, function(row){
+        return row.distance != null
+    });
+
+    rows = _.sortBy(rows, function(element){return parseFloat(element.distance)});
 
     rows = _.first(rows, 20);
 
-    //Remove entries with null distance
-    rows = _.filter(rows, function(row){return row.distance != null})
-
-    console.log(rows.length);
     return rows;
 }
 
