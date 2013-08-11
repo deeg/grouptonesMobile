@@ -12,5 +12,22 @@ Project Detail
         <p>{proj_website_url} </p>
         <p>Commitment: {proj_commitment}</p>
         <p>Distance: {distance} MI</p>
+
+        <div data-role="collapsible-set" data-theme="b" data-content-theme="b">
+            <div data-role="collapsible">
+                <h3>Send a Message!</h3>
+
+                <form action="/Message" method="post">
+                    <input type="hidden" id="toId" name="toId" value="{artist_id}" />
+                    <input type="text" id="Subject" name="Subject" readonly="true" value="{proj_name}"/>
+                    <textarea id="MessageBody" name="MessageBody" placeholder="Message Text Here...">
+
+                    </textarea>
+                    <button type="submit" id="sendMessage" data-theme="a">Send!</button>
+                </form>
+
+            </div>
+        </div>
     {/item}
+    <script src="/js/SendMessage.js"></script>
 {/dynamicBody}
