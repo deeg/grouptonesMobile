@@ -1,7 +1,7 @@
 {>"listView"/}
 
 {<listItems}
-    <li data-filtertext="{artist_name} {artist_instrument}">
+    <li data-filtertext="{artist_name} {artist_instrument} {artist_instrument} {artist_description} {artist_band}">
         <a href="/musicians/{id}">
             <img src="http://testtones.colinulin.com/images/artist_pictures/artist_{id}.jpg" />
             <h1 class="myHeader"> {artist_name} </h1>
