@@ -10,10 +10,12 @@
 .hidden {
     display:none !important
 }
-
-#logo{
-    position:absolute;
-    right:0;
+#logo {
+    width: 158px;
+    height: 75px;
+    margin: auto;
+    background: url(/img/logo.png) no-repeat 5px 8px;
+    text-indent: -9999px;
 }
 
 #headerText{
