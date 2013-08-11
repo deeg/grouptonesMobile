@@ -6,16 +6,15 @@ Musician Detail
 
 {<dynamicBody}
     {#item}
-        <span class="entryTitle">{artist_name}</span>
-        <span class="entryLabel">Headline:</span>
-        <span class="entry">{artist_headline}</span>
-        <span class="entryLabel">Instrument(s):</span>
-        <span class="entry">{artist_instrument}</span>
-        <span class="entryLabel">Band(s):</span>
-        <span class="entry">{artist_band}</span>
-
-        <span class="entryLabel">Website:</span>
-        <span class="entry">{artist_website1}</span>
+        <ul data-role="listview" data-theme="c" data-inset="true">
+            <li>
+                <div class="centered">{artist_name}</div>
+                <div class="centered">{artist_headline} </div>
+                <div class="centered">{artist_instrument} </div>
+                <div class="centered">{artist_band} </div>
+                <div class="centered">{artist_website1}  </div>
+            </li>
+        </ul>
 
         <div data-role="collapsible-set" data-theme="a" data-content-theme="b">
             <div data-role="collapsible">
