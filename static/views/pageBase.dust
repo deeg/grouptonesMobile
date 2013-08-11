@@ -1,7 +1,7 @@
 {>"head"/}
 
 <body>
-    <div data-role="page" class="type-home">
+    <div data-role="page" data-theme="b" class="type-home">
         <div id="headerWrapper" data-role="header">
             <a href="#sidePanel" data-role="button" data-inline="true" data-icon="grid"></a>
             <img src="/img/logo.png" id="logo">
@@ -12,7 +12,7 @@
             {/dynamicBody}
         </div>
 
-        <div data-role="panel"  data-display="overlay" id="sidePanel">
+        <div data-role="panel" data-theme="b"  data-display="overlay" id="sidePanel">
             {?currentUser.artist_name}
             <p><a href="/" data-role="button" data-theme="b">Home</a> </p>
             <p><a href="/profile" data-role="button" data-theme="b">Edit Profile</a> </p>
