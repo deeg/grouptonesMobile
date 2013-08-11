@@ -5,6 +5,7 @@
         <a href="/musicians/{id}">
             <img src="http://testtones.colinulin.com/images/artist_pictures/artist_{id}.jpg" />
             <h1 class="myHeader"> {artist_name} </h1>
+            <h1 class="distance"> {distance} </h1>
             <p class="myParagraph">{artist_instrument}</p>
         </a>
     </li>

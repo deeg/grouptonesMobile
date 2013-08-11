@@ -10,7 +10,7 @@ module.exports.search = function (req, res, connection, searchType) {
     var nLng = uLng - 5;
     var pLng = uLng + 5;
 
-    var tableName, paramPrefix, templateToRender;
+    var tableName, paramPrefix, templateToRender, queryString;
 
     if (searchType === 'projects') {
         tableName = 'projects';
@@ -22,12 +22,16 @@ module.exports.search = function (req, res, connection, searchType) {
         paramPrefix = 'event';
         templateToRender = 'eventsList.dust';
     }
+    if(searchType === 'musicians'){
+        tableName = 'artists_profile';
+        paramPrefix = 'artist';
+        templateToRender = 'musicianList.dust';
+        queryString = 'SELECT * FROM ' + tableName
+    }else{
+        queryString = 'SELECT p.*, a.artist_name FROM ' + tableName + ' p JOIN artists_profile a ON p.artist_id = a.id';
+    }
 
-   // var queryString = 'SELECT * FROM ' + tableName + ' where ' + paramPrefix + '_lat between ? and ? and ' + paramPrefix + '_lng between ? and ?';
-   // console.log(queryString)
-
-    connection.query( 'SELECT p.*, a.artist_name FROM ' + tableName + ' p JOIN artists_profile a ON p.artist_id = a.id', function(err, rows){
-    //where ' + paramPrefix + '_lat between ? and ? and ' + paramPrefix + '_lng between ? and ?', [nLat, pLat, nLng, pLng],  function(err, rows) {
+    connection.query(queryString , function(err, rows){
         if(err) console.error(err);
         console.log(rows.length);
         console.log(rows[0]);
