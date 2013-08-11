@@ -4,8 +4,7 @@
     <div data-role="page" data-theme="b" class="type-home">
         <div id="headerWrapper" data-role="header">
             <a href="#sidePanel" data-role="button" data-inline="true" data-icon="grid"></a>
-            <img src="/img/logo.png" id="logo">
-            <h1 id="headerText">{+dynamicHeader}GroupTones Mobile{/dynamicHeader}</h1>
+            <p id="logo">Grouptones</p>
         </div>
         <div data-role="content">
             {+dynamicBody}

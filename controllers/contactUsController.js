@@ -1,6 +1,6 @@
 var nodemailer = require("nodemailer");
 
-module.exports.sendEmail = function (req, res, connection) {
+module.exports.sendEmail = function (req, res, pool) {
     // create reusable transport method (opens pool of SMTP connections)
     //TODO: Get SMTP info of grouptones support email address
     var smtpTransport = nodemailer.createTransport("SMTP",{

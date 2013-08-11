@@ -1,6 +1,6 @@
 //setup Dependencies
 var express = require('express'),
-    port = (process.env.PORT || 4002),
+    port = (process.env.PORT || 4006),
     server = express();
 
 var dust = require('dustjs-linkedin'),
@@ -10,18 +10,10 @@ var dust = require('dustjs-linkedin'),
 require('./lib/dustHelpers');
 
 var mysql = require('mysql');
-
 var crypto = require('crypto');
 
 var passport = require('passport'),
     LocalStrategy = require('passport-local').Strategy;
-
-var connection = mysql.createConnection({
-  host     : 'ns35.etcserver.com',
-  user     : 'colinuli_test',
-  password : 's94927ki',
-  database : 'colinuli_testtones'
-});
 
 server.configure(function(){
     server.set('views', __dirname + '/static/views');
@@ -38,9 +30,16 @@ server.configure(function(){
     server.use(server.router);
 });
 
-require('./lib/passport')(connection, crypto);
+var pool  = mysql.createPool({
+    host     : 'ns35.etcserver.com',
+    user     : 'colinuli_test',
+    password : 's94927ki',
+    database : 'colinuli_testtones'
+});
 
-require('./lib/routes')(server, passport, connection, crypto);
+
+require('./lib/passport')(pool, crypto);
+require('./lib/routes')(server, passport, pool, crypto);
 
 server.listen(port);
 console.log('Listening on localhost:' + port );

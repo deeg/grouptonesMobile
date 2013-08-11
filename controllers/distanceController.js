@@ -21,6 +21,7 @@ module.exports.calculateDistances = function (rows, uLat, uLng, latParam, lngPar
     //Remove entries with null distance
     rows = _.filter(rows, function(row){return row.distance != null})
 
+    console.log(rows.length);
     return rows;
 }
 
