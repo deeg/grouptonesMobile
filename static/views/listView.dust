@@ -36,6 +36,8 @@
         {/dynamicHeader}
 
         {<dynamicBody}
+            {>"searchBy"/}
+            <p></p>
                 <ul data-role="listview" data-filter="true" data-filter-placeholder="Refine by {+searchPlaceholder}{/searchPlaceholder}" data-inset="true" data-theme="c" data-dividertheme="a">
                     <li data-role="list-divider">Overview</li>
                     {#list}

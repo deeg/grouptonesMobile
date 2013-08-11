@@ -7,10 +7,11 @@
  */
 var _ = require("underscore");
 
-module.exports.calculateDistances = function (rows, uLat, uLng, latParam, lngParam) {
+module.exports.calculateDistances = function (rows, uLat, uLng, latParam, lngParam, locationName) {
     _.each(rows, function(element, index){
         var distance = module.exports.calculateDistance(element[latParam], element[lngParam], uLat, uLng);
         element.distance = distance;
+        element.locationName = locationName ? locationName : 'your home location';
     })
 
     rows = _.sortBy(rows, function(element){return parseFloat(element.distance)})

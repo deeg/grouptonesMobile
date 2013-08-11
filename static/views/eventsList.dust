@@ -9,7 +9,7 @@
             <p class="myParagraph">
                 {@dateFormatter uglyDate="{event_start}" /}
             </p>
-            <p class="myParagraph">{distance} MI</p>
+            <p class="myParagraph">{distance} MI from {locationName}</p>
         </a>
     </li>
 {/listItems}
