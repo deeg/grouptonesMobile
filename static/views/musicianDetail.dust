@@ -7,23 +7,35 @@ Musician Detail
 {<dynamicBody}
     {#item}
         <span class="entryTitle">{artist_name}</span>
+        <span class="entryLabel">Headline:</span>
+        <span class="entry">{artist_headline}</span>
         <span class="entryLabel">Instrument(s):</span>
         <span class="entry">{artist_instrument}</span>
         <span class="entryLabel">Band(s):</span>
         <span class="entry">{artist_band}</span>
-        <span class="entryLabel">About:</span>
-        <span class="entry">{artist_about}</span>
-        <span class="entryLabel">Looking To Play:</span>
-        <ul>
-            {#likesToPlayData}
-            <li>
-                <span class="entry">{genre}</span>
-                {?details}<ul><li><span class="entryDetails">{details}</span></li></ul>{/details}
-            </li>
-            {/likesToPlayData}
 
+        <span class="entryLabel">Website:</span>
+        <span class="entry">{artist_website1}</span>
 
-        </ul>
+        <div data-role="collapsible-set" data-theme="a" data-content-theme="b">
+            <div data-role="collapsible">
+                <h3> More Details</h3>
+                <span class="entryLabel"> Looking To Play: </span>
+                <ul>
+                    {#likesToPlayData}
+                    <li>
+                        <span class="entry">{genre}</span>
+                        {?details}<ul><li><span class="entryDetails">{details}</span></li></ul>{/details}
+                    </li>
+                    {/likesToPlayData}
+                </ul>
+                <span class="entryLabel"> Services: </span>
+                {artist_services}
+                <span class="entryLabel">About:</span>
+                <span class="entry">{artist_about}</span>
+            </div>
+        </div>
+
         <div data-role="collapsible-set" data-theme="b" data-content-theme="b">
             <div data-role="collapsible">
                 <h3>Send a Message!</h3>

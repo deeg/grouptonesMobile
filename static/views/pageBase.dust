@@ -14,17 +14,20 @@
 
         <div data-role="panel"  data-display="overlay" id="sidePanel">
             {?currentUser.artist_name}
-            <p><a href="/">Home</a> </p>
-            <p><a href="/profile">Edit Profile</a> </p>
-            <p> <a href="/events">Events</a></p>
-            <p><a href="/musicians">Musicians</a> </p>
-            <p> <a href="/projects">Projects</a> </p>
-            <p> <a href="/faq">FAQ</a> </p>
-            <p> <a href="/contact">Contact Us</a> </p>
-            <p><a href="/logout">Logout</a> </p>
+            <p><a href="/" data-role="button" data-theme="b">Home</a> </p>
+            <p><a href="/profile" data-role="button" data-theme="b">Edit Profile</a> </p>
+            <p> <a href="/events" data-role="button" data-theme="b">Events</a></p>
+            <p><a href="/musicians" data-role="button" data-theme="b">Musicians</a> </p>
+            <p> <a href="/projects" data-role="button" data-theme="b">Projects</a> </p>
+            <p> <a href="/faq" data-role="button" data-theme="b">FAQ</a> </p>
+            <p> <a href="/contact" data-role="button" data-theme="b">Contact Us</a> </p>
+            <p><a href="/logout" data-role="button" data-theme="b">Logout</a> </p>
             {:else}
-            <p><a href="/register">Register</a> </p>
-            <p><a href="/login">Login</a> </p>
+
+            <p><a href="/register" data-role="button" data-theme="b">Register</a> </p>
+            <p><a href="/login" data-role="button" data-theme="b">Login</a> </p>
+            <p><a href="/faq" data-role="button" data-theme="b">FAQ</a></p>
+            <p><a href="/contact" data-role="button" data-theme="b">Contact Us</a> </p>
             {/currentUser.artist_name}
             <!-- panel content goes here -->
         </div>
