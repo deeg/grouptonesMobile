@@ -43,26 +43,26 @@
                         name_startsWith: value
                     }
                 })
-                        .then(function ( response ) {
-                            $.each( response.geonames, function ( i, val ) {
-                                var locationName = val.name ? val.name : (val.adminName1 ? val.adminName1 : val.countryCode);
-                                console.log(locationName);
-                                html += "<li class='autocompleteResponse' data-locationname='" + locationName + "' data-lat='" + val.lat + "' data-lng='" + val.lng + "'>" + val.name + (val.adminName1 ? ", " + val.adminName1 : "") + ", " + val.countryName + "</li>";
-                            });
-                            $ul.html( html );
-                            $ul.listview( "refresh" );
-                            $ul.trigger( "updatelayout");
-                        }).then(function(){
-                            $('.autocompleteResponse').click(function(e){
-                                var $target = $(e.target);
-                                var lat = $target.data('lat');
-                                var lng = $target.data('lng');
-                                var locationName = $target.data('locationname');
-                                var page = window.location.pathname;
-                                var url = page + '?lat=' + lat + '&lng=' + lng + '&locationName=' + locationName;
-                                window.location = url;
-                            })
-                        });
+                .then(function ( response ) {
+                    $.each( response.geonames, function ( i, val ) {
+                        var locationName = val.name ? val.name : (val.adminName1 ? val.adminName1 : val.countryCode);
+                        console.log(locationName);
+                        html += "<li class='autocompleteResponse' data-locationname='" + locationName + "' data-lat='" + val.lat + "' data-lng='" + val.lng + "'>" + val.name + (val.adminName1 ? ", " + val.adminName1 : "") + ", " + val.countryName + "</li>";
+                    });
+                    $ul.html( html );
+                    $ul.listview( "refresh" );
+                    $ul.trigger( "updatelayout");
+                }).then(function(){
+                    $('.autocompleteResponse').click(function(e){
+                        var $target = $(e.target);
+                        var lat = $target.data('lat');
+                        var lng = $target.data('lng');
+                        var locationName = $target.data('locationname');
+                        var page = window.location.pathname;
+                        var url = page + '?lat=' + lat + '&lng=' + lng + '&locationName=' + locationName;
+                        window.location = url;
+                    })
+                });
             }
         });
     });

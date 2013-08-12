@@ -3,9 +3,9 @@
 {<dynamicBody}
     {?currentUser.artist_name}
             <p>
-                <a href="/events" data-role="button">Events</a>
-                <a href="/musicians" data-role="button">Musicians</a>
-                <a href="/projects" data-role="button">Projects</a>
+                <a href="/events" data-role="button" data-ajax="false">Events</a>
+                <a href="/musicians" data-role="button" data-ajax="false">Musicians</a>
+                <a href="/projects" data-role="button" data-ajax="false">Projects</a>
                 <a href="/faq" data-role="button">FAQ</a>
                 <a href="/contact" data-role="button">Contact Us</a>
                 <a href="/logout" data-role="button">Log Out</a>
