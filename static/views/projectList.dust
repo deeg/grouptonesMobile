@@ -6,7 +6,7 @@
             <img class="listViewThumb" src="/img/projects.png" />
             <h1 class="myHeader"> {proj_name} </h1>
             <h3>{artist_name}</h3>
-            <h5>Distance : {distance} MI</h5>
+            <h5>Distance : {distance} MI from {locationName}</h5>
         </a>
     </li>
 {/listItems}
