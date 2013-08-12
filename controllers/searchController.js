@@ -67,6 +67,7 @@ module.exports.search = function (req, res, pool, searchType) {
             rows = distanceController.calculateDistances(rows, uLat, uLng, paramPrefix + '_lat', paramPrefix + '_lng', locationName);
 
             res.render(templateToRender, {list : rows, currentUser: req.user[0]});
+            connection.end();
         });
     })
 }
