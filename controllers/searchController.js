@@ -15,10 +15,13 @@ module.exports.search = function (req, res, pool, searchType) {
         var locationName = req.query.locationName;
     }
 
-    var nLat = uLat - 5;
-    var pLat = uLat + 5;
-    var nLng = uLng - 5;
-    var pLng = uLng + 5;
+    console.log(uLat)
+    console.log(uLng)
+
+    var nLat = Math.round(parseFloat(uLat) - 5);
+    var pLat = Math.round(parseFloat(uLat) + 5);
+    var nLng = Math.round(parseFloat(uLng) - 5);
+    var pLng = Math.round(parseFloat(uLng) + 5);
 
     var tableName, paramPrefix, templateToRender, queryString;
 
@@ -36,9 +39,9 @@ module.exports.search = function (req, res, pool, searchType) {
         tableName = 'artists_profile';
         paramPrefix = 'artist';
         templateToRender = 'musicianList.dust';
-        queryString = 'SELECT * FROM ' + tableName
+        queryString = 'SELECT * FROM ' + tableName + ' where artist_lat between ' + nLat + ' and ' + pLat + ' and artist_lng between ' + nLng + ' and ' + pLng;
     }else{
-        queryString = 'SELECT p.*, a.artist_name FROM ' + tableName + ' p JOIN artists_profile a ON p.artist_id = a.id';
+        queryString = 'SELECT p.*, a.artist_name FROM ' + tableName + ' p JOIN artists_profile a ON p.artist_id = a.id where ' + paramPrefix + '_lat between ' + nLat + ' and ' + pLat + ' and ' + paramPrefix + '_lng between ' + nLng + ' and ' + pLng;
     }
 
     pool.getConnection(function(err, connection) {
