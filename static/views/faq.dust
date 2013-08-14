@@ -11,7 +11,12 @@ FAQ
 {<dynamicBody}
 
 <div data-role="collapsible-set" data-theme="b" data-content-theme="b">
+
     <div data-role="collapsible" data-collapsed="false">
+        <h3></h3>
+        We've had to scale back GoupTones for the mobile version of the site. For the full map-based experience please visit GroupTones from a personal computer, then stay connected on the go with GroupTones Mobile!
+    </div>
+    <div data-role="collapsible">
         <h3>What is Group Tones?</h3>
         Group Tones is a simple mapping tool built for today's increasingly DIY music community.
     </div>
@@ -33,7 +38,7 @@ FAQ
         Group Tones is a free service.
     </div>
     <div data-role="collapsible">
-        <h3>Why do I do now?</h3>
+        <h3>What do I do now?</h3>
         Sign up for an account and go put yourself on the map! We've tried to make it as easy as possible for you to tell your friends and bandmates, but please help spread the word!
     </div>
 </div>
