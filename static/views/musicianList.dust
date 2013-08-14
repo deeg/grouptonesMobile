@@ -2,7 +2,7 @@
 
 {<listItems}
     <li data-filtertext="{artist_name} {artist_instrument} {artist_instrument} {artist_description} {artist_band}">
-        <a href="/musicians/{id}">
+        <a href="/musicians/{id}" data-ajax="false">
             <img src="http://testtones.colinulin.com/images/artist_pictures/artist_{id}.jpg" />
             <h1 class="myHeader"> {artist_name} </h1>
             <h1 class="distance">Distance: {distance} MI from {locationName} </h1>
