@@ -3,7 +3,7 @@
 {<listItems}
     <li data-filtertext="{artist_name} {artist_instrument} {artist_instrument} {artist_description} {artist_band}">
         <a href="/musicians/{id}" data-ajax="false">
-            <img src="http://testtones.colinulin.com/images/artist_pictures/artist_{id}.jpg" />
+            {@eq key="{artist_picture}" value="default-image.jpg"}<img class="listViewThumb" src="/img/musicians.png" />{:else}<img src="http://testtones.colinulin.com/images/artist_pictures/artist_{id}.jpg" />{/eq}
             <h1 class="myHeader"> {artist_name} </h1>
             <h1 class="distance">Distance: {distance} MI from {locationName} </h1>
             <p class="myParagraph">{artist_instrument}</p>
