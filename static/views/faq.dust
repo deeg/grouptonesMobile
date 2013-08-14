@@ -13,29 +13,29 @@ FAQ
 <div data-role="collapsible-set" data-theme="b" data-content-theme="b">
 
     <div data-role="collapsible" data-collapsed="false">
-        <h3></h3>
+        <h3>GroupTones Mobile</h3>
         We've had to scale back GoupTones for the mobile version of the site. For the full map-based experience please visit GroupTones from a personal computer, then stay connected on the go with GroupTones Mobile!
     </div>
     <div data-role="collapsible">
-        <h3>What is Group Tones?</h3>
-        Group Tones is a simple mapping tool built for today's increasingly DIY music community.
+        <h3>What is GroupTones?</h3>
+        GroupTones is a simple mapping tool built for today's increasingly DIY music community.
     </div>
     <div data-role="collapsible">
-        <h3>Who is Group Tones for? Who should join Group Tones??</h3>
-        Group Tones was created for everyone who wants to explore diverse musical interests and backgrounds. Whether it's finding a new drummer or your first jazz brunch, Group Tones connects you with the music community around you.
+        <h3>Who is GroupTones for? Who should join GroupTones??</h3>
+        Group Tones was created for everyone who wants to explore diverse musical interests and backgrounds. Whether it's finding a new drummer or your first jazz brunch, GroupTones connects you with the music community around you.
     </div>
     <div data-role="collapsible">
-        <h3>Why should I join Group Tones?</h3>
+        <h3>Why should I join GroupTones?</h3>
         Group Tones is incredibly easy to use and free! You work hard enough on your music. Spending hours looking for gigs and musicians shouldn't keep you from spending time on what's most important do you.
     </div>
     <div data-role="collapsible">
-        <h3>Where is Group Tones based? Where can I use Group Tones?</h3>
+        <h3>Where is GroupTones based? Where can I use GroupTones?</h3>
         Although GroupTones is a Boston-based music+tech company, we have 2500+ members throughout the US and encourage you to use GroupTones to explore music as you travel.
     </div>
     <div data-role="collapsible">
         <!-- TODO: GET IMAGES LIKE IN GROUPTONES FAQ -->
-        <h3>What does Group Tones cost?</h3>
-        Group Tones is a free service.
+        <h3>What does GroupTones cost?</h3>
+        GroupTones is a free service.
     </div>
     <div data-role="collapsible">
         <h3>What do I do now?</h3>
