@@ -4,7 +4,8 @@
     <div data-role="page" id="myPage" data-theme="b" class="type-home">
         <div id="headerWrapper" data-role="header">
             <a href="#sidePanel" data-role="button" data-inline="true" data-icon="grid"></a>
-            <p id="logo">Grouptones</p>
+            <p id="logo">Gr
+ouptones</p>
         </div>
         <div data-role="content">
             {+dynamicBody}
@@ -14,10 +15,6 @@
         <div data-role="panel" data-theme="b"  data-display="overlay" id="sidePanel">
             {?currentUser.artist_name}
             <p><a href="/" data-role="button" data-theme="b">Home</a> </p>
-            <p><a href="/profile" data-role="button" data-theme="b">Edit Profile</a> </p>
-            <p> <a href="/events" data-role="button" data-theme="b" data-ajax="false">Events</a></p>
-            <p><a href="/musicians" data-role="button" data-theme="b" data-ajax="false">Musicians</a> </p>
-            <p> <a href="/projects" data-role="button" data-theme="b" data-ajax="false">Projects</a> </p>
             <p> <a href="/faq" data-role="button" data-theme="b">FAQ</a> </p>
             <p> <a href="/contact" data-role="button" data-theme="b">Contact Us</a> </p>
             <p><a href="/logout" data-role="button" data-theme="b">Logout</a> </p>

@@ -25,7 +25,6 @@ module.exports.getProfileDetails = function (req, res, pool){
     pool.getConnection(function(err, connection) {
         connection.query('SELECT * from artists_profile where id=' + req.user[0].id, function(err, rows){
             if (err) console.error(err);
-            console.log(connection.query);
             connection.query('SELECT * from artists_languages where profile_id = ' + rows[0].id, function(err, rowss){
                 console.log(rowss[0])
                 if (rowss[0]) {

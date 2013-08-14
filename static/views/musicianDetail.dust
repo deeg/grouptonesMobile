@@ -10,9 +10,9 @@ Musician Detail
             <li>
                 <div class="centered">{artist_name}</div>
                 <div class="centered">{artist_headline} </div>
-                <div class="centered">{artist_instrument} </div>
-                <div class="centered">{artist_band} </div>
-                <div class="centered">{artist_website1}  </div>
+                <div class="centered">Instruments: {artist_instrument} </div>
+                <div class="centered">Bands: {artist_band} </div>
+                {?artist_website1}<div class="centered"><a href="{artist_website1}">Check out {artist_name}'s Website</a>  </div> {/artist_website1}
             </li>
         </ul>
 

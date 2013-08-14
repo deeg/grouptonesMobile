@@ -63,10 +63,10 @@ module.exports.search = function (req, res, pool, searchType) {
                     //No events in lat lng area, fall back to state
                     rows = distanceController.calculateDistances(rows, uLat, uLng, paramPrefix + '_lat', paramPrefix + '_lng', locationName);
                     res.render(templateToRender, {list: rowss, currentUser: req.user[0]});
-                    console.log("rendering state results")
+                    console.log("rendering state results");
                 })
             }
-            console.log("rendering lat/lng results")
+            console.log("rendering lat/lng results");
             rows = distanceController.calculateDistances(rows, uLat, uLng, paramPrefix + '_lat', paramPrefix + '_lng', locationName);
 
             res.render(templateToRender, {list : rows, currentUser: req.user[0]});
