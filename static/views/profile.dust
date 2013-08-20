@@ -57,16 +57,17 @@ Edit Profile
         <span class="profileData">{user.email}</span>
         <div class="controls editMode hidden">
             <input id="email" class="profileFormElement" name="email" type="text" value="{user.email}" placeholder="user@domain.com">
-            <input type="checkbox" id="doNotShowEmail" {@eq key="1" value=user.email_viewable}checked{/eq}>
+            <input type="checkbox" id="doNotShowEmail" {@eq key="1" value="{user.email_viewable}"}checked{/eq}>
         </div>
         <span class="help-block hidden" for="email"></span>
     </div>
+
     <div class="control-group">
         <label class="control-label" for="artistPhone">Phone Number:</label>
         <span class="profileData">{user.artist_phone}</span>
         <div class="controls editMode hidden">
             <input id="artistPhone" class="profileFormElement" name="artist_phone" type="text" value="{user.artist_phone}" placeholder="xxx-xxx-xxxx">
-            <input type="checkbox" id="doNotShowPhone" {?user.phone_viewable}checked{/user.phone_viewable}>
+            <input type="checkbox" id="doNotShowPhone" {@eq key="1" value="{user.phone_viewable}"}checked{/eq}>
         </div>
         <span class="help-block hidden" for="artistPhone"></span>
     </div>
