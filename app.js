@@ -9,10 +9,7 @@ var dust = require('dustjs-linkedin'),
 
 require('./lib/dustHelpers');
 
-var crypto = require('crypto');
-
-var passport = require('passport'),
-    LocalStrategy = require('passport-local').Strategy;
+var passport = require('passport');
 
 server.configure(function(){
     server.set('views', __dirname + '/static/views');
@@ -29,12 +26,8 @@ server.configure(function(){
     server.use(server.router);
 });
 
-
-var DAL = require('./lib/DAL');
-console.log(DAL);
-
-require('./lib/passport')(DAL.pool, crypto);
-require('./lib/routes')(server, passport, DAL.pool, crypto);
+require('./lib/passport')();
+require('./lib/routes')(server);
 
 server.listen(port);
 console.log('Listening on localhost:' + port );
