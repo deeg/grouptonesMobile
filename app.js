@@ -9,7 +9,6 @@ var dust = require('dustjs-linkedin'),
 
 require('./lib/dustHelpers');
 
-var mysql = require('mysql');
 var crypto = require('crypto');
 
 var passport = require('passport'),
@@ -30,16 +29,12 @@ server.configure(function(){
     server.use(server.router);
 });
 
-var pool  = mysql.createPool({
-    host     : 'ns35.etcserver.com',
-    user     : 'colinuli_test',
-    password : 's94927ki',
-    database : 'colinuli_testtones'
-});
 
+var DAL = require('./lib/DAL');
+console.log(DAL);
 
-require('./lib/passport')(pool, crypto);
-require('./lib/routes')(server, passport, pool, crypto);
+require('./lib/passport')(DAL.pool, crypto);
+require('./lib/routes')(server, passport, DAL.pool, crypto);
 
 server.listen(port);
 console.log('Listening on localhost:' + port );
