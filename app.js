@@ -17,6 +17,7 @@ server.configure(function(){
     server.engine('dust', cons.dust);
     server.set('view engine', 'dust');
     server.locals({title: 'grouptones'});
+    server.use(express.compress());
     server.use(express.static(__dirname + '/static'));
     server.use(express.bodyParser());
     server.use(express.cookieParser());

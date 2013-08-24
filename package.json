@@ -1,0 +1,19 @@
+{
+  "name": "GroupTonesMobile",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "~3.3.5",
+    "underscore": "~1.5.1",
+    "nodemailer": "~0.5.2"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deeg/GroupTonesMobile.git"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
