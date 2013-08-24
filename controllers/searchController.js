@@ -45,7 +45,6 @@ module.exports.search = function (req, res, searchType) {
         queryString = 'SELECT p.*, a.artist_name FROM ' + tableName + ' p JOIN artists_profile a ON p.artist_id = a.id where ' + paramPrefix + '_lat between ' + nLat + ' and ' + pLat + ' and ' + paramPrefix + '_lng between ' + nLng + ' and ' + pLng;
     }
 
-    console.log(queryString);
     DAL.makeQuery({query: queryString, escapedValues : []}, function(err, rows){
         if(err) console.error(err);
         console.log(rows.length);
