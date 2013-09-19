@@ -1,7 +1,7 @@
 {>"listView"/}
 
 {<listItems}
-    <li data-filtertext="{artist_name} {artist_instrument} {artist_instrument} {artist_description} {artist_band}">
+    <li>
         <a href="/musicians/{id}" data-ajax="false">
             {@eq key="{artist_picture}" value="default-image.jpg"}<img class="listViewThumb" src="/img/musicians.png" />{:else}<img src="http://testtones.colinulin.com/images/artist_pictures/artist_{id}.jpg" />{/eq}
             <h1 class="myHeader"> {artist_name} </h1>
@@ -12,5 +12,3 @@
 {/listItems}
 
 {<listType}Musicians{/listType}
-
-{<searchPlaceholder}name, or instrument{/searchPlaceholder}

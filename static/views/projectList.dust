@@ -1,7 +1,7 @@
 {>"listView"/}
 
 {<listItems}
-    <li data-filtertext="{proj_name} {proj_description}">
+    <li>
         <a href="/projects/{id}">
             <img class="listViewThumb" src="/img/projects.png" />
             <h1 class="myHeader"> {proj_name} </h1>
@@ -12,5 +12,3 @@
 {/listItems}
 
 {<listType}Projects{/listType}
-
-{<searchPlaceholder}name, or description{/searchPlaceholder}
