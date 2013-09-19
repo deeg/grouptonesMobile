@@ -8,7 +8,12 @@
             </div>
             <div data-role="collapsible" data-collapsed="true" data-mini="true">
                 <h3>Near City/State/Zip</h3>
-                <ul id="location" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Enter City, State or Zip..." data-filter-theme="d">
+                <ul id="location" data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Enter City, State or Zip..." data-filter-theme="d"/>
+            </div>
+            <div data-role="collapsible" data-collapsed="true" data-mini="true">
+                <h3>Keyword</h3>
+                <input id="searchTerm" placeholder="Enter search term.">
+                <button id="search">Search</button>
             </div>
         </div>
     </div>
@@ -59,11 +64,59 @@
                         var lng = $target.data('lng');
                         var locationName = $target.data('locationname');
                         var page = window.location.pathname;
-                        var url = page + '?lat=' + lat + '&lng=' + lng + '&locationName=' + locationName;
+                        var searchString, url;
+                        if(window.location.search && window.location.href.indexOf('lat') != -1){
+                            searchString = window.location.search.substr(1);
+                            var searchStringSplit = searchString.split('&');
+                            $.each(searchStringSplit, function(i,e){
+                                if(e.indexOf('lat') == 0){
+                                    searchStringSplit[i] = 'lat=' + lat;
+                                }
+                                if(e.indexOf('lng') == 0){
+                                    searchStringSplit[i] = 'lng=' + lng;
+                                }
+                                if(e.indexOf('locationName') == 0){
+                                    searchStringSplit[i] = 'locationName=' + locationName;
+                                }
+                            });
+                            searchString = searchStringSplit.join('&');
+                            url = page + '?' + searchString;
+                        }else if(window.location.search){
+                            searchString = window.location.search;
+                            searchString = searchString + '&lat=' + lat + '&lng=' + lng + '&locationName=' + locationName;
+                            url = page + searchString;
+                        }else{
+                            url = page + '?lat=' + lat + '&lng=' + lng + '&locationName=' + locationName;
+                        }
                         window.location = url;
                     })
                 });
             }
+        });
+
+        $('#search').on('click', function(event){
+            var page = window.location.pathname;
+            var searchTerm = $('#searchTerm').val();
+            var searchString, url;
+            if(window.location.search && window.location.href.indexOf('searchTerm') != -1){
+                searchString = window.location.search.substr(1);
+                var searchStringSplit = searchString.split('&');
+                $.each(searchStringSplit, function(i,e){
+                    if(e.indexOf('searchTerm') == 0){
+                        searchStringSplit[i] = 'searchTerm=' + searchTerm;
+                    }
+                });
+                searchString = searchStringSplit.join('&');
+                url = page + '?' + searchString;
+            }else if(window.location.search){
+                searchString = window.location.search;
+                searchString = searchString + '&searchTerm=' + searchTerm;
+                url = page + searchString;
+            }else{
+                url = page + '?searchTerm=' + searchTerm;
+            }
+
+            window.location = url;
         });
     });
 </script>

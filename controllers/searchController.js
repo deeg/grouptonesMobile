@@ -24,26 +24,44 @@ module.exports.search = function (req, res, searchType) {
     var nLng = Math.round(parseFloat(uLng) - 5);
     var pLng = Math.round(parseFloat(uLng) + 5);
 
-    var tableName, paramPrefix, templateToRender, queryString;
+    var tableName, paramPrefix, templateToRender, queryString, searchTermString;
 
     if (searchType === 'projects') {
         tableName = 'projects';
         paramPrefix = 'proj';
         templateToRender = 'projectList.dust';
+        searchTermString = " AND ((proj_name  REGEXP '[[:<:]]{searchTerm}[[:>:]]') OR (proj_description  REGEXP '[[:<:]]{searchTerm}[[:>:]]') OR (proj_website  REGEXP '[[:<:]]{searchTerm}[[:>:]]') OR" +
+            "(proj_website_url  REGEXP '[[:<:]]{searchTerm}[[:>:]]') OR (a.artist_name  REGEXP '[[:<:]]{searchTerm}[[:>:]]'))";
+
     }
     if (searchType === 'events') {
         tableName = 'events';
         paramPrefix = 'event';
         templateToRender = 'eventsList.dust';
+        searchTermString = " AND ((event_name  REGEXP '[[:<:]]{searchTerm}[[:>:]]') OR (event_description  REGEXP '[[:<:]]{searchTerm}[[:>:]]') OR (event_venue  REGEXP '[[:<:]]{searchTerm}[[:>:]]') OR (a.artist_name  REGEXP '[[:<:]]{searchTerm}[[:>:]]'))"
     }
     if(searchType === 'musicians'){
         tableName = 'artists_profile';
         paramPrefix = 'artist';
         templateToRender = 'musicianList.dust';
+        searchTermString = " AND ((artist_name  REGEXP '[[:<:]]{searchTerm}[[:>:]]') OR (artist_about  REGEXP '[[:<:]]{searchTerm}[[:>:]]') OR (artist_instrument  REGEXP '[[:<:]]{searchTerm}[[:>:]]') OR" +
+            "(artist_band  REGEXP '[[:<:]]{searchTerm}[[:>:]]') OR (artist_services  REGEXP '[[:<:]]{searchTerm}[[:>:]]') OR (artist_headline REGEXP '[[:<:]]{searchTerm}[[:>:]]'))";
         queryString = 'SELECT * FROM ' + tableName + ' where artist_lat between ' + nLat + ' and ' + pLat + ' and artist_lng between ' + nLng + ' and ' + pLng;
     }else{
         queryString = 'SELECT p.*, a.artist_name FROM ' + tableName + ' p JOIN artists_profile a ON p.artist_id = a.id where ' + paramPrefix + '_lat between ' + nLat + ' and ' + pLat + ' and ' + paramPrefix + '_lng between ' + nLng + ' and ' + pLng;
     }
+
+
+    //Check if there is a search query term, if so build the search SQL string
+    if(req.query.searchTerm){
+        var searchTerm = req.query.searchTerm
+        searchTermString = searchTermString.replace(/{searchTerm}/g, searchTerm);
+        queryString = queryString + searchTermString;
+    }
+
+    console.log(queryString);
+
+
 
     DAL.makeQuery({query: queryString, escapedValues : []}, function(err, rows){
         if(err) console.error(err);
