@@ -1,8 +1,8 @@
-<div data-role="collapsible-set" data-theme="b" data-content-theme="b">
+<div data-role="collapsible-set" data-collapsed-icon="search" data-theme="b" data-content-theme="b">
     <div data-role="collapsible" data-collapsed="true" data-mini="true">
         <h3>Search...</h3>
 
-        <div data-role="collapsible-set" data-theme="b" data-content-theme="b">
+        <div data-role="collapsible-set" data-theme="b" data-collapsed-icon="search" data-content-theme="b">
             <div id="closeToMeParent" data-role="collapsible" data-collapsed="true" data-mini="true">
                 <h3 id="closeToMe">Close to me</h3>
             </div>
