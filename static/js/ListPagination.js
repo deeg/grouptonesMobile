@@ -6,7 +6,7 @@
        $('#GetMoreRecords').click(function(){
           console.log('clicked');
            $.ajax({
-               url: document.location.pathname.substr(1) + '/paginate/' + index,
+               url: document.location.pathname.substr(1) + '/paginate/' + index + window.location.search,
                dataType: 'json'
            })
                .done(function(results) {
