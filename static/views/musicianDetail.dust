@@ -6,7 +6,7 @@ Musician Detail
 
 {<dynamicBody}
     {#item}
-        {@eq key="{artist_picture}" value="default-image.jpg"}{:else}<img src="http://testtones.colinulin.com/images/artist_pictures/artist_{id}.jpg" />{/eq}
+        {@eq key="{artist_picture}" value="default-image.jpg"}{:else}<img width="100%" height="100%" style="max-height:290px;" src="http://testtones.colinulin.com/images/artist_pictures/artist_{id}.jpg" />{/eq}
         <ul data-role="listview" data-theme="c" data-inset="true">
             <li>
                 <div class="centered">{artist_name}</div>
