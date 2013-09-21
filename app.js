@@ -21,7 +21,7 @@ server.configure(function(){
     server.use(express.static(__dirname + '/static'));
     server.use(express.bodyParser());
     server.use(express.cookieParser());
-    server.use(express.session({ secret: 'testing secret' }));
+    server.use(express.cookieSession({ secret: 'Push uffizi drive me to firenze', cookie: { maxAge: 7 * 24 * 60 * 60 * 1000 }}));
     server.use(passport.initialize());
     server.use(passport.session());
     server.use(server.router);
