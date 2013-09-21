@@ -28,7 +28,8 @@
             margin-bottom:0px;
         }
         </style>
-                {/dynamicCSS}
+        {/dynamicCSS}
+
 
 
         {<dynamicHeader}
@@ -38,7 +39,7 @@
         {<dynamicBody}
             {>"searchBy"/}
             <p></p>
-                <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="a">
+                <ul data-role="listview" data-inset="true" id="ListView" data-theme="c" data-dividertheme="a">
                     <li data-role="list-divider">Overview</li>
                     {#list}
 
@@ -47,6 +48,12 @@
 
                     {/list}
                 </ul>
-         {/dynamicBody}
+
+            <a href="#" id="GetMoreRecords" data-role="button">Get Next 20 Results</a>
+        {/dynamicBody}
 
 
+        <script src="/js/vendor/dust-full-2.0.0.min.js"></script>
+        <script src="/js/vendor/dust-helpers.js"></script>
+
+        <script src="/js/ListPagination.js"></script>

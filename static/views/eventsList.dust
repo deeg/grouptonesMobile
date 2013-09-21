@@ -15,3 +15,5 @@
 {/listItems}
 
 {<listType}Events{/listType}
+
+<script src="/views/Compiled/eventsItem.js"></script>

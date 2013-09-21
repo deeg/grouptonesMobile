@@ -12,3 +12,5 @@
 {/listItems}
 
 {<listType}Musicians{/listType}
+
+<script src="/views/Compiled/musiciansItem.js"></script>

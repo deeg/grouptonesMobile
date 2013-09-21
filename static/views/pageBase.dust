@@ -4,8 +4,7 @@
     <div data-role="page" id="myPage" data-theme="b" class="type-home">
         <div id="headerWrapper" data-role="header">
             <a href="#sidePanel" data-role="button" data-inline="true" data-icon="grid"></a>
-            <p id="logo">Gr
-ouptones</p>
+            <p id="logo">Grouptones</p>
         </div>
         <div data-role="content">
             {+dynamicBody}

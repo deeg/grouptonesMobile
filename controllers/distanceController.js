@@ -8,12 +8,12 @@
 var _ = require("underscore");
 var dateConverter = require('../lib/phpToJsDate');
 
-module.exports.calculateDistances = function (rows, uLat, uLng, latParam, lngParam, locationName) {
+module.exports.calculateDistances = function (rows, start, uLat, uLng, latParam, lngParam, locationName) {
     _.each(rows, function(element, index){
         var distance = module.exports.calculateDistance(element[latParam], element[lngParam], uLat, uLng);
         element.distance = distance;
         element.locationName = locationName ? locationName : 'your home location';
-    })
+    });
 
     rows = _.filter(rows, function(row){
         return row.distance != null
@@ -23,21 +23,22 @@ module.exports.calculateDistances = function (rows, uLat, uLng, latParam, lngPar
     if(rows[0] && rows[0].event_start){
             //Change all dates into JS dates.
              rows = _.map(rows, function(row){
-             row.event_start_formatted = dateConverter.date('F j, Y, g:i a', row.event_start)
+             row.event_start_formatted = dateConverter.date('F j, Y, g:i a', row.event_start);
              return row;
-             })
+             });
              //Filter out all past events
              rows = _.filter(rows, function(row){
                 return new Date(row.event_start_formatted) >= new Date();
-             })
+             });
     }
 
     rows = _.sortBy(rows, function(element){return parseFloat(element.distance)});
 
-    rows = _.first(rows, 20);
+    var end = start + 20;
+    rows = rows.slice(start, end);
 
     return rows;
-}
+};
 
 module.exports.calculateDistance = function (lat2, lon2, uLat, uLng) {
     if(lat2 == null || lon2 == null || uLat == null || uLng == null){

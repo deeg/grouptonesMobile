@@ -12,3 +12,5 @@
 {/listItems}
 
 {<listType}Projects{/listType}
+
+<script src="/views/Compiled/projectsItem.js"></script>
