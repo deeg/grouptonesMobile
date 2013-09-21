@@ -31,4 +31,4 @@ require('./lib/passport')();
 require('./lib/routes')(server);
 
 server.listen(80);
-console.log('Listening on localhost:' + port );
+console.log('Listening on localhost:' + 80 );
