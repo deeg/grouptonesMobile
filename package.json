@@ -1,6 +1,7 @@
 {
   "name": "GroupTonesMobile",
   "version": "0.0.1",
+  "subdomain": "Grouptones-Mobile",
   "dependencies": {
     "express": "~3.3.5",
     "underscore": "~1.5.1",
@@ -25,5 +26,8 @@
   },
   "engines": {
     "node": ">=0.8.0"
+  },
+  "scripts": {
+    "start": "node app.js"
   }
 }
