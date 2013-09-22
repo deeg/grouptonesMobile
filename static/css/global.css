@@ -57,3 +57,64 @@
 .centered {
     text-align: center;
 }
+
+
+.buttonList
+{
+    position: relative;
+}
+
+.buttonList a
+{
+    text-align:				center;
+    color: 					#fff;
+    text-shadow:			1px 0px 1px #000;
+    text-decoration:		none;
+    font-weight:			bold;
+    position:				absolute;
+    cursor:					pointer;
+}
+
+.buttonList a span
+{
+    position: relative;
+    margin-top: 25px;
+    display: block;
+    background: 				none;
+    color: 						#fff;
+    font-size:					16px;
+    overflow: visible;
+}
+
+.buttonList.large { height: 300px; }
+.buttonList.large a
+{
+    width:					120px;
+    height:					100px;
+}
+.buttonList.large a div
+{
+    height:						80px;
+    margin-left:				18px;
+    margin-right:				18px;
+}
+
+.buttonList.small { height: 40px; }
+.buttonList.small a
+{
+    display: inline-block;
+    position: relative;
+    width: 35px;
+    margin: 3px;
+}
+.buttonList.small a div {height: 30px;}
+
+.buttonList a.leftTop { left: 20%; margin-left: -50px; top: 0px; }
+.buttonList a.rightTop { right: 20%; margin-right: -50px; top: 0px;}
+.buttonList a.leftBottom { left: 20%; margin-left: -50px; bottom: 10px;}
+.buttonList a.rightBottom { right: 20%; margin-right: -50px; bottom: 10px;}
+
+
+.HomeImage {
+    width: 90px;
+}

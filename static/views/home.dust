@@ -2,12 +2,38 @@
 
 {<dynamicBody}
     {?currentUser.artist_name}
-            <p>
-                <a href="/musicians" data-role="button" data-ajax="false">Musicians</a>
-                <a href="/events" data-role="button" data-ajax="false">Events</a>
-                <a href="/projects" data-role="button" data-ajax="false">Projects</a>
-                <a href="/profile" data-role="button" data-theme="b">Edit Profile</a>
-            </p>
+
+        <div class="buttonList large">
+
+            <a href="/musicians" data-ajax="false" class="leftTop">
+                <div>
+                    <img class="HomeImage" src="/img/musicians.png" alt="Musicians" />
+                </div>
+
+                <span>Musicians</span>
+            </a>
+            <a href="/events" data-ajax="false" class="rightTop">
+                <div>
+                    <img class="HomeImage" src="/img/events.png" alt="Events" />
+                </div>
+
+                <span>Events </span>
+            </a>
+
+            <a href="/projects" data-ajax="false" class="leftBottom">
+                <div>
+                    <img class="HomeImage" src="/img/projects.png" alt="Projects" />
+                </div>
+                <span>Projects</span>
+            </a>
+            <a href="/profile" class="rightBottom">
+                <div>
+                    <img class="HomeImage" src="/img/gigs.png" alt="Edit Profile" />
+                </div>
+                <span>Edit Profile</span>
+            </a>
+        </div>
+
         {:else}
             <p>
                 <a href="/login" data-role="button">Log In</a>
