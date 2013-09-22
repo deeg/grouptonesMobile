@@ -28,7 +28,7 @@
             </a>
             <a href="/profile" class="rightBottom">
                 <div>
-                    <img class="HomeImage" src="/img/gigs.png" alt="Edit Profile" />
+                    <img class="HomeImage" src="/img/EditProfile.png" alt="Edit Profile" />
                 </div>
                 <span>Edit Profile</span>
             </a>
