@@ -16,4 +16,5 @@
 
 {<listType}Events{/listType}
 
+<script src="/js/Grouptones-dust-helpers.js"></script>
 <script src="/views/Compiled/eventsItem.js"></script>

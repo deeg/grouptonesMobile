@@ -7,16 +7,20 @@
 
 {<dynamicBody}
     {#item}
-        <span class="entryTitle">{event_name}</span>
-        <span class="entryLabel">Start Time:</span>
-        <span class="entry">{@dateFormatter uglyDate="{event_start}" /}</span>
-        <span class="entryLabel">Description:</span>
-        <span class="entry">{event_description}</span>
-        <span class="entryLabel">Venue:</span>
-        <span class="entry">{event_venue}</span>
-        <span class="entryLabel">Location:</span>
-        <span class="entry">{event_street}, {event_city}, {event_state} {event_zip}</span>
-        <span class="entryLabel">Posted By:</span>
-        <span class="entry"> <a href="/musicians/{artist_id}" data-ajax="false"> {artist_name} </a>  </span>
+        <ul data-role="listview" data-inset="true" data-theme="c">
+            <li>
+                <span class="entryTitle">{event_name}</span>
+                <span class="entryLabel">Start Time:</span>
+                <span class="entry">{@dateFormatter uglyDate="{event_start}" /}</span>
+                <span class="entryLabel">Description:</span>
+                <span class="entry">{event_description}</span>
+                <span class="entryLabel">Venue:</span>
+                <span class="entry">{event_venue}</span>
+                <span class="entryLabel">Location:</span>
+                <span class="entry">{event_street}, {event_city}, {event_state} {event_zip}</span>
+                <span class="entryLabel">Posted By:</span>
+                <span class="entry"> <a href="/musicians/{artist_id}" data-ajax="false"> {artist_name} </a>  </span>
+            </li>
+        </ul>
     {/item}
 {/dynamicBody}
