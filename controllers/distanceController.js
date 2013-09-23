@@ -23,16 +23,21 @@ module.exports.calculateDistances = function (rows, start, uLat, uLng, latParam,
     if(rows[0] && rows[0].event_start){
             //Change all dates into JS dates.
              rows = _.map(rows, function(row){
-             row.event_start_formatted = dateConverter.date('F j, Y, g:i a', row.event_start);
-             return row;
+                row.event_start_formatted = dateConverter.date('F j, Y, g:i a', row.event_start);
+                return row;
              });
              //Filter out all past events
              rows = _.filter(rows, function(row){
                 return new Date(row.event_start_formatted) >= new Date();
              });
+        //Filter by start date for events
+        rows = _.sortBy(rows, function(element){ return element.event_start });
+    } else {
+        //Not events, filter by distance not date
+        rows = _.sortBy(rows, function(element){ return parseFloat(element.distance) });
     }
 
-    rows = _.sortBy(rows, function(element){return parseFloat(element.distance)});
+
 
     var end = start + 20;
     rows = rows.slice(start, end);

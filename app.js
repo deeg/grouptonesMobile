@@ -1,6 +1,6 @@
 //setup Dependencies
 var express = require('express'),
-    port = (process.env.PORT || 4006),
+    port = 80,
     server = express();
 
 var dust = require('dustjs-linkedin'),
@@ -30,5 +30,9 @@ server.configure(function(){
 require('./lib/passport')();
 require('./lib/routes')(server);
 
-server.listen(80);
-console.log('Listening on localhost:' + 80 );
+if (process.env.NODE_ENV === 'development') {
+   port = 4006;
+}
+
+server.listen(port);
+console.log('Listening on localhost:' + port);
