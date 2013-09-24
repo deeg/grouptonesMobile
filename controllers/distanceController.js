@@ -6,7 +6,6 @@
  * To change this template use File | Settings | File Templates.
  */
 var _ = require("underscore");
-var dateConverter = require('../lib/phpToJsDate');
 
 module.exports.calculateDistances = function (rows, start, uLat, uLng, latParam, lngParam, locationName) {
     _.each(rows, function(element, index){
@@ -23,7 +22,7 @@ module.exports.calculateDistances = function (rows, start, uLat, uLng, latParam,
     if(rows[0] && rows[0].event_start){
             //Change all dates into JS dates.
              rows = _.map(rows, function(row){
-                row.event_start_formatted = dateConverter.date('F j, Y, g:i a', row.event_start);
+                row.event_start_formatted = new Date(row.event_start * 1000);
                 return row;
              });
              //Filter out all past events
