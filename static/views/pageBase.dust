@@ -11,12 +11,12 @@
             {/dynamicBody}
         </div>
 
-        <div data-role="panel" data-theme="b"  data-display="overlay" id="sidePanel">
+        <div data-role="panel" data-display="overlay" id="sidePanel">
             {?currentUser.artist_name}
-            <p><a href="/" data-role="button" data-theme="b">Home</a> </p>
-            <p> <a href="/faq" data-role="button" data-theme="b">FAQ</a> </p>
-            <p> <a href="/contact" data-role="button" data-theme="b">Contact Us</a> </p>
-            <p><a href="/logout" data-role="button" data-theme="b">Logout</a> </p>
+            <p> <a href="/"> <img src="/img/home.png"></a> </p>
+            <p> <a href="/faq"><img src="/img/faq.png"></a> </p>
+            <p> <a href="/contact"><img src="/img/contactUs.png"></a> </p>
+            <p><a href="/logout"><img src="/img/logout.png"></a> </p>
             {:else}
 
             <p><a href="/register" data-role="button" data-theme="b">Register</a> </p>

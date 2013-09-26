@@ -185,4 +185,12 @@
     background-repeat:no-repeat;
     background-position:center center;
     background-size:cover;
-}​
+}
+
+.ui-panel{
+    width: 175px !important;
+     background: url(images/bg.gif) !important;
+     background-repeat: no-repeat !important;
+     background-position: center center !important;
+     background-size: cover !important;
+ }

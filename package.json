@@ -1,6 +1,7 @@
 {
   "name": "GroupTonesMobile",
   "version": "0.0.1",
+  "domains": [ "m.grouptones.com" ],
   "subdomain": "Grouptones-Mobile",
   "dependencies": {
     "express": "~3.3.5",
