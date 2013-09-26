@@ -180,6 +180,10 @@
 
 }*/
 
+.whiteText {
+    color: white;
+}
+
 .ui-panel-content-wrap {
     background : url(images/bg.gif);
     background-repeat:no-repeat;

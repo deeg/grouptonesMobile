@@ -5,7 +5,7 @@ Login
 {/dynamicHeader}
 
 {<dynamicBody}
-    <form action="/login" data-ajax="false" method="post">
+    <form action="/login" data-ajax="false" method="post" class="whiteText">
         <div>
             <label>Username:</label>
             <input type="text" name="username"/>

@@ -6,12 +6,16 @@ Project Detail
 
 {<dynamicBody}
     {#item}
-        <h3> <a href="/musicians/{artist_id}" data-ajax="false"> {artist_name} </a></h3>
-        <p>{proj_name}</p>
-        <p>{proj_description} </p>
-        <p>{proj_website_url} </p>
-        <p>Commitment: {proj_commitment}</p>
-        <p>Distance: {distance} MI</p>
+
+        <div class="whiteText">
+            <h3> <a href="/musicians/{artist_id}" data-ajax="false"> {artist_name} </a></h3>
+            <p>{proj_name}</p>
+            <p>{proj_description} </p>
+            <p>{proj_website_url} </p>
+            <p>Commitment: {proj_commitment}</p>
+            <p>Distance: {distance} MI</p>
+        </div>
+
 
         <div data-role="collapsible-set" data-theme="b" data-content-theme="b">
             <div data-role="collapsible">
