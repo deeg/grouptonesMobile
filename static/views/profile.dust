@@ -10,8 +10,8 @@ Edit Profile
 {/dynamicHeader}
 
 {<dynamicBody}
-<div class="statusMessage"></div>
-<form data-ajax="false" action="javascript:void(0)">
+<div class="statusMessage whiteText"></div>
+<form data-ajax="false" action="javascript:void(0)" class="whiteText">
     <div class="control-group">
         <label class="control-label" for="artistAbout">About:</label>
         <span class="profileData">{user.artist_about}</span>
