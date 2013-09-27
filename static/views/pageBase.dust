@@ -13,16 +13,16 @@
 
         <div data-role="panel" data-display="overlay" id="sidePanel">
             {?currentUser.artist_name}
-            <p> <a href="/"> <img src="/img/home.png"></a> </p>
-            <p> <a href="/faq"><img src="/img/faq.png"></a> </p>
-            <p> <a href="/contact"><img src="/img/contactUs.png"></a> </p>
-            <p><a href="/logout"><img src="/img/logout.png"></a> </p>
+            <p> <a href="/"> <img class="panelIcon" src="/img/home.png"></a> </p>
+            <p> <a href="/faq"><img class="panelIcon" src="/img/faq.png"></a> </p>
+            <p> <a href="/contact"><img class="panelIcon" src="/img/contactUs.png"></a> </p>
+            <p><a href="/logout"><img class="panelIcon" src="/img/logout.png"></a> </p>
             {:else}
 
-            <p><a href="/register" data-role="button" data-theme="b">Register</a> </p>
-            <p><a href="/login" data-role="button" data-theme="b">Login</a> </p>
-            <p><a href="/faq" data-role="button" data-theme="b">FAQ</a></p>
-            <p><a href="/contact" data-role="button" data-theme="b">Contact Us</a> </p>
+            <p> <a href="/login"> <img class="panelIcon" src="/img/Login.png"></a> </p>
+            <p> <a href="/register"><img class="panelIcon" src="/img/Register.png"></a> </p>
+            <p> <a href="/contact"><img class="panelIcon" src="/img/contactUs.png"></a> </p>
+            <p><a href="/faq"><img class="panelIcon" src="/img/faq.png"></a> </p>
             {/currentUser.artist_name}
             <!-- panel content goes here -->
         </div>

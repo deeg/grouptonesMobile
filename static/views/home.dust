@@ -35,11 +35,35 @@
         </div>
 
         {:else}
-            <p>
-                <a href="/login" data-role="button">Log In</a>
-                <a href="/register" data-role="button" data-ajax="false">Sign Up</a>
-                <a href="/faq" data-role="button">FAQ</a>
-                <a href="/contact" data-role="button">Contact Us</a>
-            </p>
+            <div class="buttonList large">
+                <a href="/login" class="leftTop">
+                    <div>
+                        <img class="HomeImage" src="/img/Login.png" alt="Login" />
+                    </div>
+
+                    <span>Log In</span>
+                </a>
+                <a href="/register" data-ajax="false" class="rightTop">
+                    <div>
+                        <img class="HomeImage" src="/img/Register.png" alt="Register" />
+                    </div>
+
+                    <span>Sign Up</span>
+                </a>
+
+                <a href="/faq" class="leftBottom">
+                    <div>
+                        <img class="HomeImage" src="/img/faq.png" alt="FAQ" />
+                    </div>
+                    <span>FAQ</span>
+                </a>
+                <a href="/contact" class="rightBottom">
+                    <div>
+                        <img class="HomeImage" src="/img/contactUs.png" alt="Contact Us" />
+                    </div>
+                    <span>Contact Us</span>
+                </a>
+            </div>
+
     {/currentUser.artist_name}
 {/dynamicBody}

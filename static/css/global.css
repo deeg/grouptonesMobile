@@ -184,6 +184,14 @@
     color: white;
 }
 
+.panelIcon {
+    width: 50px;
+}
+
+.ui-panel-inner {
+    padding-top: 75px;
+}
+
 .ui-panel-content-wrap {
     background : url(images/bg.gif);
     background-repeat:no-repeat;
@@ -192,7 +200,7 @@
 }
 
 .ui-panel{
-    width: 175px !important;
+    width: 75px !important;
      background: url(images/bg.gif) !important;
      background-repeat: no-repeat !important;
      background-position: center center !important;
