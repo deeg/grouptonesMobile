@@ -60,7 +60,7 @@ module.exports.search = function (req, res, searchType, done) {
 
     DAL.makeQuery({query: queryString, escapedValues : []}, function(err, rows){
         if(err) console.error(err);
-        if(rows.length < 1){
+        if(rows && rows.length < 1){
             DAL.makeQuery({query: "SELECT * from " + tableName + " where " + paramPrefix + "_state=?", escapedValues : [req.user[0].artist_state]}, function(error, rowss){
                 if(rowss.length < 1){
                     DAL.makeQuery({query: "SELECT * from " + tableName + " limit 10", escapedValues : []}, function(errorr, rowsss){
