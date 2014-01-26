@@ -20,15 +20,6 @@ Musician Detail
         <div data-role="collapsible-set" data-theme="a" data-content-theme="b">
             <div data-role="collapsible">
                 <h3> More Details</h3>
-                <span class="entryLabel"> Looking To Play: </span>
-                <ul>
-                    {#likesToPlayData}
-                    <li>
-                        <span class="entry">{genre}</span>
-                        {?details}<ul><li><span class="entryDetails">{details}</span></li></ul>{/details}
-                    </li>
-                    {/likesToPlayData}
-                </ul>
                 <span class="entryLabel"> Services: </span>
                 {artist_services}
                 <span class="entryLabel">About:</span>

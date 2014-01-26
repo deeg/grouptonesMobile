@@ -45,14 +45,6 @@ Edit Profile
         <span class="help-block hidden" for="artistInstrument"></span>
     </div>
     <div class="control-group">
-        <label class="control-label" for="artistInstrument">Language(s):</label>
-        <span class="profileData">{user.languages}</span>
-        <div class="controls editMode hidden">
-            <input id="artistLanguages" class="profileFormElement" name="languages" type="text" value="{user.languages}" placeholder="What languages do you speak?">
-        </div>
-        <span class="help-block hidden" for="artistLanguages"></span>
-    </div>
-    <div class="control-group">
         <label class="control-label" for="email">Email:</label>
         <span class="profileData">{user.email}</span>
         <div class="controls editMode hidden">
