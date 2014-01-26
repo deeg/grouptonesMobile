@@ -45,7 +45,8 @@
                         featureClass: "P",
                         style: "full",
                         maxRows: 12,
-                        name_startsWith: value
+                        name_startsWith: value,
+                        username:'deeg'
                     }
                 })
                 .then(function ( response ) {

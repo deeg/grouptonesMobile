@@ -1,6 +1,6 @@
 //setup Dependencies
 var express = require('express'),
-    port = 80,
+    port = 4000,
     server = express();
 
 var dust = require('dustjs-linkedin'),

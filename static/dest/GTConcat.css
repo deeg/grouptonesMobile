@@ -420,10 +420,6 @@ table {
     display:inline;
 }
 
-#headerWrapper{
-    padding-bottom: 25px;
-}
-
 
 /* ARTIST DETAIL PAGE STYLES */
 
@@ -455,3 +451,156 @@ table {
 .centered {
     text-align: center;
 }
+
+
+.buttonList
+{
+    position: relative;
+}
+
+.buttonList a
+{
+    text-align:				center;
+    color: 					#fff;
+    text-shadow:			1px 0px 1px #000;
+    text-decoration:		none;
+    font-weight:			bold;
+    position:				absolute;
+    cursor:					pointer;
+}
+
+.buttonList a span
+{
+    position: relative;
+    margin-top: 25px;
+    display: block;
+    background: 				none;
+    color: 						#fff;
+    font-size:					16px;
+    overflow: visible;
+}
+
+.buttonList.large { height: 300px; }
+.buttonList.large a
+{
+    width:					120px;
+    height:					100px;
+}
+.buttonList.large a div
+{
+    height:						80px;
+    margin-left:				18px;
+    margin-right:				18px;
+}
+
+.buttonList.small { height: 40px; }
+.buttonList.small a
+{
+    display: inline-block;
+    position: relative;
+    width: 35px;
+    margin: 3px;
+}
+.buttonList.small a div {height: 30px;}
+
+.buttonList a.leftTop { left: 20%; margin-left: -50px; top: 0px; }
+.buttonList a.rightTop { right: 20%; margin-right: -50px; top: 0px;}
+.buttonList a.leftBottom { left: 20%; margin-left: -50px; bottom: 10px;}
+.buttonList a.rightBottom { right: 20%; margin-right: -50px; bottom: 10px;}
+
+
+.HomeImage {
+    width: 90px;
+}
+
+
+
+/*
+.ui-panel-content-wrap {
+    */
+/*    *//*
+*/
+/* IE10 Consumer Preview *//*
+*/
+/*
+        background-image: -ms-radial-gradient(center, ellipse closest-side, #E8E8E8 0%, #185A8C 100%);
+
+        *//*
+*/
+/* Mozilla Firefox *//*
+*/
+/*
+        background-image: -moz-radial-gradient(center, ellipse closest-side, #E8E8E8 0%, #185A8C 100%);
+
+        *//*
+*/
+/* Opera *//*
+*/
+/*
+        background-image: -o-radial-gradient(center, ellipse closest-side, #E8E8E8 0%, #185A8C 100%);
+
+        *//*
+*/
+/* Webkit (Safari/Chrome 10) *//*
+*/
+/*
+        background-image: -webkit-gradient(radial, center center, 0, center center, 140, color-stop(0, #E8E8E8), color-stop(1, #185A8C));
+
+        *//*
+*/
+/* Webkit (Chrome 11+) *//*
+*/
+/*
+        background-image: -webkit-radial-gradient(center, ellipse closest-side, #E8E8E8 0%, #185A8C 100%);
+
+        *//*
+*/
+/* W3C Markup, IE10 Release Preview *//*
+*/
+/*
+        background-image: radial-gradient(ellipse closest-side at center, #E8E8E8 0%, #185A8C 100%);*//*
+
+
+    background:url('../dest/images/bg.gif') no-repeat;
+
+     */
+/* Set rules to fill background *//*
+
+    min-height: 100%;
+    min-width: 100%;
+
+    */
+/* Set up proportionate scaling *//*
+
+    width: 100%;
+    height: 100%;
+
+
+}*/
+
+.whiteText {
+    color: white;
+}
+
+.panelIcon {
+    width: 50px;
+}
+
+.ui-panel-inner {
+    padding-top: 75px;
+}
+
+.ui-panel-content-wrap {
+    background : url(images/bg.gif);
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:cover;
+}
+
+.ui-panel{
+    width: 75px !important;
+     background: url(images/bg.gif) !important;
+     background-repeat: no-repeat !important;
+     background-position: center center !important;
+     background-size: cover !important;
+ }
