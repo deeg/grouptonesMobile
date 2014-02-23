@@ -26,11 +26,11 @@
                 </div>
                 <span>Projects</span>
             </a>
-            <a href="/profile" class="rightBottom">
+            <a href="/messages" class="rightBottom">
                 <div>
-                    <img class="HomeImage" src="/img/EditProfile.png" alt="Edit Profile" />
+                    <img class="HomeImage" src="/img/contactUs.png" alt="Messages" />
                 </div>
-                <span>Edit Profile</span>
+                <span>Inbox</span>
             </a>
         </div>
 

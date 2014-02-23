@@ -1,0 +1,30 @@
+{>"pageBase"/}
+
+{<dynamicHeader}
+Message Detail
+{/dynamicHeader}
+
+{<dynamicBody}
+    <div class="whiteText">
+        {msg_body}
+    </div>
+
+    <div data-role="collapsible-set" data-theme="b" data-content-theme="b">
+        <div data-role="collapsible">
+            <h3>Reply!</h3>
+
+                <form action="/Message" method="post">
+                    <input type="hidden" id="toId" name="toId" value="{from_id}" />
+                     <input type="text" id="Subject" name="Subject" placeholder="Subject"/>
+                      <textarea id="MessageBody" name="MessageBody" placeholder="Message Text Here...">
+
+                      </textarea>
+                    <button type="submit" id="sendMessage" data-theme="a">Send!</button>
+                </form>
+
+        </div>
+    </div>
+
+    <a href="/messages/" data-ajax="false">Back to Inbox</a>
+    <script src="/js/SendMessage.js"></script>
+{/dynamicBody}

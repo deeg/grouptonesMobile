@@ -15,16 +15,16 @@ module.exports.saveProfile = function (req, res) {
             res.json(500);
         }
     });
-}
+};
 
 module.exports.getProfileDetails = function (req, res){
     DAL.makeQuery({query: 'SELECT * from artists_profile where id = ?', escapedValues : [req.user[0].id]}, function(err, rows){
         if(!err){
-            res.render('profile.dust', {user: rows[0], currentUser: req.user[0]});  
+            res.render('profile.dust', {user: rows[0], currentUser: req.user[0]});
         }else{
             res.json(500);
         }
     });
-}
+};
 
 

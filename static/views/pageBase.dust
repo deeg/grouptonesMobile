@@ -15,7 +15,7 @@
             {?currentUser.artist_name}
             <p> <a href="/"> <img class="panelIcon" src="/img/home.png"></a> </p>
             <p> <a href="/faq"><img class="panelIcon" src="/img/faq.png"></a> </p>
-            <p> <a href="/contact"><img class="panelIcon" src="/img/contactUs.png"></a> </p>
+            <p> <a href="/profile"><img class="panelIcon" src="/img/EditProfile.png"></a> </p>
             <p><a href="/logout"><img class="panelIcon" src="/img/logout.png"></a> </p>
             {:else}
 

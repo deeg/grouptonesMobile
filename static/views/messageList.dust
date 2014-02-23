@@ -1,0 +1,17 @@
+{>"pageBase"/}
+
+{<dynamicBody}
+    <ul data-role="listview" data-inset="true" id="ListView" data-theme="c" data-dividertheme="a">
+        <li data-role="list-divider">Overview</li>
+        {#list}
+            <li>
+                <a href="/messages/{id}" data-ajax="false">
+                    <h1 class="myHeader">From: {artist_name} </h1>
+                    <p class="myParagraph">{msg_subject}</p>
+                </a>
+            </li>
+        {/list}
+    </ul>
+{/dynamicBody}
+
+{<listType}Messages{/listType}

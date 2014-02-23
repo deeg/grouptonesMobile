@@ -30,7 +30,7 @@ FAQ
     </div>
     <div data-role="collapsible">
         <h3>Where is GroupTones based? Where can I use GroupTones?</h3>
-        Although GroupTones is a Boston-based music+tech company, we have 2500+ members throughout the US and encourage you to use GroupTones to explore music as you travel.
+        Although GroupTones is a Boston-based music+tech company, we have 4500+ members throughout the US and encourage you to use GroupTones to explore music as you travel.
     </div>
     <div data-role="collapsible">
         <!-- TODO: GET IMAGES LIKE IN GROUPTONES FAQ -->
@@ -40,6 +40,10 @@ FAQ
     <div data-role="collapsible">
         <h3>What do I do now?</h3>
         Sign up for an account and go put yourself on the map! We've tried to make it as easy as possible for you to tell your friends and bandmates, but please help spread the word!
+    </div>
+    <div data-role="collapsible">
+        <h3>How do I reach you?</h3>
+        Check out our <a href="/contact">contact us</a> page, or feel free to send an email to <strong>Dan@grouptones.com</strong>
     </div>
 </div>
 
