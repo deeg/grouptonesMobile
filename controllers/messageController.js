@@ -1,7 +1,8 @@
-var DAL = require('../lib/DAL');
+var DAL = require('../lib/DAL'),
+    _ = require('underscore');
 
 module.exports.list = function (req, res) {
-	DAL.makeQuery({query: 'SELECT e.*, a.artist_name from mail_messages e JOIN artists_profile a ON e.from_id = a.id where e.to_id = ?', escapedValues: [req.user[0].id]}, function (err, messages) {
+	DAL.makeQuery({query: 'SELECT e.*, a.artist_name from mail_messages e JOIN artists_profile a ON e.from_id = a.id where e.to_id = ? ORDER BY sent_date DESC', escapedValues: [req.user[0].id]}, function (err, messages) {
         if (!err) {
             console.log(messages);
             res.render('messageList.dust', {list: messages, currentUser: req.user[0]});
