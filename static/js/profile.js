@@ -27,8 +27,6 @@ Profile = {
 
         });
 
-        console.log(profileToSave);
-
         $.ajax({
             url: 'profile/' + id,
             type: "post",

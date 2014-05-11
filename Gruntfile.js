@@ -8,6 +8,7 @@ module.exports = function(grunt) {
             scripts: {
                 src: [
                     'static/js/profile.js',
+                    'static/js/resetPassword.js',
                     'static/js/vendor/custom.modernizr.js',
                     'static/js/vendor/jquery.min.js',
                     'static/js/bootstrap.min.js',
