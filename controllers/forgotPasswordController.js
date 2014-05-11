@@ -2,7 +2,7 @@ var _ = require("underscore"),
     profileController = require('../controllers/profileController'),
     DAL = require('../lib/DAL'),
     nodemailer = require('nodemailer'),
-    emailConfig = require('/grouptones/emailConfig.js'),
+    emailConfig = require('/grouptonesMobile/emailConfig.js'),
     crypto = require('crypto');
 
 // create reusable transport method (opens pool of SMTP connections)
