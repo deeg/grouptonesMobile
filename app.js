@@ -31,7 +31,7 @@ require('./lib/passport')();
 require('./lib/routes')(server);
 
 if (process.env.NODE_ENV === 'development') {
-   port = 4006;
+   port = 5000;
 }
 
 server.listen(port);

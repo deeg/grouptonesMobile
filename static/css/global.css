@@ -206,3 +206,11 @@
      background-position: center center !important;
      background-size: cover !important;
  }
+
+.error{
+    color: red;
+}
+
+.success{
+    color: limegreen;
+}

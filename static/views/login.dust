@@ -16,6 +16,7 @@ Login
         </div>
         {?IncorrectPassword} <h4 class="alert"> {IncorrectPassword} </h4>  {/IncorrectPassword}
         <div>
+            <a href="/resetPassword">Forgot Password?</a>
             <button type="submit" name="submit" value="submit" data-theme="b" >Submit</button>
         </div>
     </form>

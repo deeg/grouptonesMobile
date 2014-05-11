@@ -27,4 +27,22 @@ module.exports.getProfileDetails = function (req, res){
     });
 };
 
+module.exports.getProfileByEmail = function(username, cb){
+    DAL.makeQuery({query: 'SELECT * from artists_profile where email = ?', escapedValues : [username]}, function(err, rows){
+        if(!err){
+            cb(null, rows);
+        }else{
+            cb(err);
+        }
+    });
+};
+
+module.exports.updatePassword = function(options, cb){
+    if(options.password && options.email){
+        DAL.makeQuery({query: 'UPDATE artists_profile SET password = ? WHERE email = ?', escapedValues: [options.password, options.email]}, function(err, rows){
+            cb(err, rows);
+        })
+    }
+};
+
 
